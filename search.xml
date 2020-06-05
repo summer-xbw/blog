@@ -11,10 +11,16 @@
         <content type="html"><![CDATA[]]></content>
       
       
+      <categories>
+          
+          <category> -Web前端 </category>
+          
+      </categories>
+      
       
         <tags>
             
-            <tag> Web前端 </tag>
+            <tag> -JavaScript基础语法 </tag>
             
         </tags>
       
@@ -30,10 +36,41 @@
         <content type="html"><![CDATA[]]></content>
       
       
+      <categories>
+          
+          <category> -Web前端 </category>
+          
+      </categories>
+      
       
         <tags>
             
-            <tag> Web前端 </tag>
+            <tag> -Vue基础 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>JavaScript算法笔记</title>
+      <link href="/2020/06/04/algorithm_notes/"/>
+      <url>/2020/06/04/algorithm_notes/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      <categories>
+          
+          <category> -Web前端 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> -JavaScript算法 </tag>
             
         </tags>
       

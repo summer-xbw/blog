@@ -2,16 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2020/06/04/algorithm_notes/</loc>
+    
+    <lastmod>2020-06-05T08:16:19.615Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2020/06/04/JavaScript/</loc>
     
-    <lastmod>2020-06-05T06:26:32.830Z</lastmod>
+    <lastmod>2020-06-05T08:12:34.507Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://yoursite.com/2020/06/04/vue/</loc>
     
-    <lastmod>2020-06-05T06:26:31.180Z</lastmod>
+    <lastmod>2020-06-05T08:10:45.261Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/tags/index.html</loc>
+    
+    <lastmod>2020-06-05T08:08:14.484Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/categories/index.html</loc>
+    
+    <lastmod>2020-06-05T08:04:22.833Z</lastmod>
     
   </url>
   
