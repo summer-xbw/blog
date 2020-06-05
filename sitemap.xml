@@ -2,9 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2020/06/04/interview/</loc>
+    
+    <lastmod>2020-06-05T06:28:56.771Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2020/06/04/JavaScript/</loc>
     
-    <lastmod>2020-06-05T02:06:10.472Z</lastmod>
+    <lastmod>2020-06-05T06:26:32.830Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2020/06/04/vue/</loc>
+    
+    <lastmod>2020-06-05T06:26:31.180Z</lastmod>
     
   </url>
   
