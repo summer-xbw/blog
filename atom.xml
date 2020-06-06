@@ -40,14 +40,23 @@
     <link href="http://yoursite.com/2020/06/04/vue/"/>
     <id>http://yoursite.com/2020/06/04/vue/</id>
     <published>2020-06-04T12:25:02.000Z</published>
-    <updated>2020-06-05T08:10:45.261Z</updated>
+    <updated>2020-06-06T04:26:37.462Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Vue安装的三种方式"><a href="#Vue安装的三种方式" class="headerlink" title="Vue安装的三种方式"></a>Vue安装的三种方式</h2><ol><li><strong>CDN引入</strong><ul><li><strong>开发环境版本，包含了有帮助的命令行警告</strong><br><code>&lt;script src=&quot;https://cdn.jsdelivr.net/npm/vue/dist/vue.js&quot;&gt;&lt;/script&gt;</code></li><li><strong>生产环境版本，优化了尺寸和速度</strong><br><code>&lt;script src=&quot;https://cdn.jsdelivr.net/npm/vue&quot;&gt;&lt;/script&gt;</code></li></ul></li><li><strong>官方下载引入</strong>  <ul><li>直接引入<code>&lt;script&gt;</code>标签</li></ul></li><li><strong>NPM安装</strong>  <ul><li><code>npm install vue</code></li></ul></li></ol>]]></content>
     
     <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;Vue安装的三种方式&quot;&gt;&lt;a href=&quot;#Vue安装的三种方式&quot; class=&quot;headerlink&quot; title=&quot;Vue安装的三种方式&quot;&gt;&lt;/a&gt;Vue安装的三种方式&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;CDN引入&lt;/strong&gt;&lt;ul&gt;
+&lt;li&gt;&lt;
+      
     
     </summary>
     
     
-      <category term="-Web前端" scheme="http://yoursite.com/categories/Web%E5%89%8D%E7%AB%AF/"/>
+      <category term="-Vue" scheme="http://yoursite.com/categories/Vue/"/>
     
     
       <category term="-Vue基础" scheme="http://yoursite.com/tags/Vue%E5%9F%BA%E7%A1%80/"/>
