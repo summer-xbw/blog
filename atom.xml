@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-06-05T08:12:34.507Z</updated>
+  <updated>2020-06-06T09:10:54.475Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,30 +17,37 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>JavaScript</title>
-    <link href="http://yoursite.com/2020/06/04/JavaScript/"/>
-    <id>http://yoursite.com/2020/06/04/JavaScript/</id>
-    <published>2020-06-04T12:25:02.000Z</published>
-    <updated>2020-06-05T08:12:34.507Z</updated>
+    <title>vue_mvvm</title>
+    <link href="http://yoursite.com/2020/06/06/vue-mvvm/"/>
+    <id>http://yoursite.com/2020/06/06/vue-mvvm/</id>
+    <published>2020-06-06T08:25:58.000Z</published>
+    <updated>2020-06-06T09:10:54.475Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="MVVM的理解"><a href="#MVVM的理解" class="headerlink" title="MVVM的理解"></a>MVVM的理解</h2><pre><code>MVVM拆开来即为Model-View-ViewModel，由View ViewModel Model三部分组成</code></pre><div style="text-align: center"><p><img src="/images/vue_mvvm.png" alt="MVVM的理解图"></p></div><ul><li><strong>View层</strong><ul><li>视图层</li><li>前端开发中，通常为DOM</li><li>主要用与展示信息</li></ul></li><li><strong>Model层</strong><ul><li>数据层</li><li>可能是固定的数据，更多的是来自于网络请求</li></ul></li><li><strong>ViewModel层</strong><ul><li>视图模型层</li><li>是View和Model沟通的桥梁</li><li>一方面实现了数据绑定(<strong>Data Bindings</strong>),即将<strong>Model</strong>层数据的改变实时反应到<strong>View</strong>层中</li><li>另一方面实现了<strong>DOM</strong>监听(<strong>DOM Listener</strong>)，即监听<strong>DOM</strong>事件的发生，并改变对应的数据</li></ul></li></ul>]]></content>
     
     <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;MVVM的理解&quot;&gt;&lt;a href=&quot;#MVVM的理解&quot; class=&quot;headerlink&quot; title=&quot;MVVM的理解&quot;&gt;&lt;/a&gt;MVVM的理解&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;MVVM拆开来即为Model-View-ViewModel，由View ViewMo
+      
     
     </summary>
     
     
-      <category term="-Web前端" scheme="http://yoursite.com/categories/Web%E5%89%8D%E7%AB%AF/"/>
+      <category term="-Vue" scheme="http://yoursite.com/categories/Vue/"/>
     
     
-      <category term="-JavaScript基础语法" scheme="http://yoursite.com/tags/JavaScript%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/"/>
+      <category term="-Vue中的MVVM" scheme="http://yoursite.com/tags/Vue%E4%B8%AD%E7%9A%84MVVM/"/>
     
   </entry>
   
   <entry>
     <title>Vue</title>
-    <link href="http://yoursite.com/2020/06/04/vue/"/>
-    <id>http://yoursite.com/2020/06/04/vue/</id>
-    <published>2020-06-04T12:25:02.000Z</published>
-    <updated>2020-06-06T04:26:37.462Z</updated>
+    <link href="http://yoursite.com/2020/06/05/vue/"/>
+    <id>http://yoursite.com/2020/06/05/vue/</id>
+    <published>2020-06-05T12:20:02.000Z</published>
+    <updated>2020-06-06T08:23:32.932Z</updated>
     
     <content type="html"><![CDATA[<h2 id="Vue安装的三种方式"><a href="#Vue安装的三种方式" class="headerlink" title="Vue安装的三种方式"></a>Vue安装的三种方式</h2><ol><li><strong>CDN引入</strong><ul><li><strong>开发环境版本，包含了有帮助的命令行警告</strong><br><code>&lt;script src=&quot;https://cdn.jsdelivr.net/npm/vue/dist/vue.js&quot;&gt;&lt;/script&gt;</code></li><li><strong>生产环境版本，优化了尺寸和速度</strong><br><code>&lt;script src=&quot;https://cdn.jsdelivr.net/npm/vue&quot;&gt;&lt;/script&gt;</code></li></ul></li><li><strong>官方下载引入</strong>  <ul><li>直接引入<code>&lt;script&gt;</code>标签</li></ul></li><li><strong>NPM安装</strong>  <ul><li><code>npm install vue</code></li></ul></li></ol>]]></content>
     
@@ -60,6 +67,25 @@
     
     
       <category term="-Vue基础" scheme="http://yoursite.com/tags/Vue%E5%9F%BA%E7%A1%80/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JavaScript</title>
+    <link href="http://yoursite.com/2020/06/04/JavaScript/"/>
+    <id>http://yoursite.com/2020/06/04/JavaScript/</id>
+    <published>2020-06-04T12:25:02.000Z</published>
+    <updated>2020-06-05T08:12:34.507Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+      <category term="-Web前端" scheme="http://yoursite.com/categories/Web%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="-JavaScript基础语法" scheme="http://yoursite.com/tags/JavaScript%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/"/>
     
   </entry>
   
