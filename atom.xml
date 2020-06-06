@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-06-06T09:10:54.475Z</updated>
+  <updated>2020-06-06T09:19:16.971Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="http://yoursite.com/2020/06/06/vue-mvvm/"/>
     <id>http://yoursite.com/2020/06/06/vue-mvvm/</id>
     <published>2020-06-06T08:25:58.000Z</published>
-    <updated>2020-06-06T09:10:54.475Z</updated>
+    <updated>2020-06-06T09:19:16.971Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="MVVM的理解"><a href="#MVVM的理解" class="headerlink" title="MVVM的理解"></a>MVVM的理解</h2><pre><code>MVVM拆开来即为Model-View-ViewModel，由View ViewModel Model三部分组成</code></pre><div style="text-align: center"><p><img src="/images/vue_mvvm.png" alt="MVVM的理解图"></p></div><ul><li><strong>View层</strong><ul><li>视图层</li><li>前端开发中，通常为DOM</li><li>主要用与展示信息</li></ul></li><li><strong>Model层</strong><ul><li>数据层</li><li>可能是固定的数据，更多的是来自于网络请求</li></ul></li><li><strong>ViewModel层</strong><ul><li>视图模型层</li><li>是View和Model沟通的桥梁</li><li>一方面实现了数据绑定(<strong>Data Bindings</strong>),即将<strong>Model</strong>层数据的改变实时反应到<strong>View</strong>层中</li><li>另一方面实现了<strong>DOM</strong>监听(<strong>DOM Listener</strong>)，即监听<strong>DOM</strong>事件的发生，并改变对应的数据</li></ul></li></ul>]]></content>
+    <content type="html"><![CDATA[<h2 id="MVVM的理解"><a href="#MVVM的理解" class="headerlink" title="MVVM的理解"></a>MVVM的理解</h2><pre><code>MVVM拆开来即为Model-View-ViewModel，由View ViewModel Model三部分组成</code></pre><div style="text-align: center"><p><img src="/images/vue_mvvm.png" alt="Vue的数据驱动视图"></p></div><ul><li><strong>View层</strong><ul><li>视图层</li><li>前端开发中，通常为DOM</li><li>主要用与展示信息</li></ul></li><li><strong>Model层</strong><ul><li>数据层</li><li>可能是固定的数据，更多的是来自于网络请求</li></ul></li><li><strong>ViewModel层</strong><ul><li>视图模型层</li><li>是View和Model沟通的桥梁</li><li>一方面实现了数据绑定(<strong>Data Bindings</strong>),即将<strong>Model</strong>层数据的改变实时反应到<strong>View</strong>层中</li><li>另一方面实现了<strong>DOM</strong>监听(<strong>DOM Listener</strong>)，即监听<strong>DOM</strong>事件的发生，并改变对应的数据</li></ul></li></ul>]]></content>
     
     <summary type="html">
     
