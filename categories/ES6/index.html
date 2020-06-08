@@ -48,8 +48,8 @@
     
     
     <title>
-        
-            Vue中的MVVM | Xbw的博客
+          
+            Xbw的博客
         
     </title>
     
@@ -203,194 +203,28 @@
 </aside>
   
   <main id="main-contain" class="mdui-container mdui-m-t-5">
-    <article id="article" class="mdui-card mdui-p-b-2 mdui-m-b-5">
-  <header class="mdui-card-media">
     
     
-      <div class="post-header"> 
-  <a class="post-header-title" href="/2020/06/06/vue-mvvm/">Vue中的MVVM</a>
-  <div class="post-header-meta">
-    <span>
-      <span class="iconfont icon-calendar"></span>
-      Posted on:&nbsp;2020-06-06
-    </span>
-    <span>
-      <span class="iconfont icon-calendar-check"></span>
-      Edited on:&nbsp;2020-06-06
-    </span>
-    <span>
-      <span class="iconfont icon-folder"></span>
-      In:&nbsp;<a class="category-link" href="/categories/Vue/">-Vue</a>
-    </span>
-    
-      <span>
-        <span class="iconfont icon-eye"></span>
-        Views:&nbsp;
-        <span id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv"></span></span>
-      </span>
-    
-  </div>
-</div>   
     
 
 
-
-    
-    
-    <div class="mdui-card-menu">
-    
-      <button class="mdui-btn mdui-btn-icon mdui-text-color-teal" mdui-menu="{target: '#share_menu', align: 'right'}"><i class="iconfont icon-share"></i></button>
-      <ul class="mdui-menu" id="share_menu">
-        <li class="mdui-menu-item">
-          <a href="http://service.weibo.com/share/share.php?appkey=&title=Vue中的MVVM&url=http://yoursite.com/2020/06/06/vue-mvvm/&pic=http://yoursite.com/null&searchPic=false&style=simple" target="_blank" class="mdui-ripple">Share to Weibo</a>
-        </li>
-        <li class="mdui-menu-item">
-          <a href="https://twitter.com/intent/tweet?text=Vue中的MVVM&url=http://yoursite.com/2020/06/06/vue-mvvm/&via=Xbw" target="_blank" class="mdui-ripple">Share to Twitter</a>
-        </li>
-        <li class="mdui-menu-item">
-          <a href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2020/06/06/vue-mvvm/" target="_blank" class="mdui-ripple">Share to Facebook</a>
-        </li>
-        <li class="mdui-menu-item">
-          <a href="https://plus.google.com/share?url=http://yoursite.com/2020/06/06/vue-mvvm/" target="_blank" class="mdui-ripple">Share to Google+</a>
-        </li>
-        <li class="mdui-menu-item">
-          <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://yoursite.com/2020/06/06/vue-mvvm/&title=Vue中的MVVM" target="_blank" class="mdui-ripple">Share to LinkedIn</a>
-        </li>
-        <li class="mdui-menu-item">
-          <a href="http://connect.qq.com/widget/shareqq/index.html?site=Xbw的博客&title=Vue中的MVVM&summary=&pics=http://yoursite.com/null&url=http://yoursite.com/2020/06/06/vue-mvvm/" target="_blank" class="mdui-ripple">Share to QQ</a>
-        </li>
-        <li class="mdui-menu-item">
-          <a href="https://telegram.me/share/url?url=http://yoursite.com/2020/06/06/vue-mvvm/&text=Vue中的MVVM" target="_blank" class="mdui-ripple">Share to Telegram</a>
-        </li>
-      </ul>
-    
-  </div>
-  </header>
-  
-  
-  
-  
-  <div class="post-tags">
-    
-      <i class="iconfont icon-tag">
-        <a rel="tag" href = /tags/Vue%E4%B8%AD%E7%9A%84MVVM/ >-Vue中的MVVM</a>
-      </i>
-    
-  </div>
-
-  
-  <div class="mdui-card-content mdui-typo mdui-p-x-4">
-    <h2 id="MVVM的理解"><a href="#MVVM的理解" class="headerlink" title="MVVM的理解"></a>MVVM的理解</h2><pre><code>MVVM拆开来即为Model-View-ViewModel，由View ViewModel Model三部分组成</code></pre><div style="text-align: center">
-
-<p><img src="/images/vue_mvvm.png" alt="Vue的数据驱动视图"></p>
-</div>
-
-<ul>
-<li><strong>View层</strong><ul>
-<li>视图层</li>
-<li>前端开发中，通常为DOM</li>
-<li>主要用与展示信息</li>
-</ul>
-</li>
-<li><strong>Model层</strong><ul>
-<li>数据层</li>
-<li>可能是固定的数据，更多的是来自于网络请求</li>
-</ul>
-</li>
-<li><strong>ViewModel层</strong><ul>
-<li>视图模型层</li>
-<li>是View和Model沟通的桥梁</li>
-<li>一方面实现了数据绑定(<strong>Data Bindings</strong>),即将<strong>Model</strong>层数据的改变实时反应到<strong>View</strong>层中</li>
-<li>另一方面实现了<strong>DOM</strong>监听(<strong>DOM Listener</strong>)，即监听<strong>DOM</strong>事件的发生，并改变对应的数据</li>
-</ul>
-</li>
-</ul>
-
-  </div>
-  <!--文末结束语-->
-  
-    <div style="text-align:center;color: #ccc;font-size:24px;"> --- 已经到底啦 <i class="iconfont icon-heartbeat" style="font-size:24px;"></i> The End --- </div>
-  
-  <!--页脚广告-->
-  
-  <div class="mdui-divider"></div>
-  
-  <nav>
-    
-      <a rel="prev" class="post-nav-item mdui-float-left" href="/2020/06/08/es6/">
-        <i class="iconfont icon-angle-left"></i>
-        <span>ES6基础</span>
-      </a>
-    
-    
-      <a rel="next" class="post-nav-item mdui-float-right" href="/2020/06/05/vue/">
-        <span>Vue基础</span>
-        <i class="iconfont icon-angle-right"></i>
-      </a>
-    
-  </nav>
-</article>
-
-
-
-
-  <div class="toc-button"  style="z-index: 100;">
-    <button class="mdui-fab mdui-ripple mdui-color-teal" mdui-menu="{target: '#toc'}"><i class="iconfont icon-list"></i></button>
-    <ul class="mdui-menu" id="toc">
-      <li class="mdui-menu-item">
-        <a href="/2020/06/06/vue-mvvm/" id="toc-header" class="mdui-ripple">Table of Contents</a>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#MVVM的理解"><span class="toc-number">1.</span> <span class="toc-text">MVVM的理解</span></a></li></ol>
-      </li>
-    </ul>
-  </div>
-
-
-
-    <div id="comment" class="mdui-card mdui-p-a-2 mdui-m-b-5">
-      <div class="mdui-tab" mdui-tab>
-        
-          <a href="#comment-tab0" class="mdui-ripple">gitalk</a>
-        
-          <a href="#comment-tab1" class="mdui-ripple">livere</a>
-        
-      </div>
-      
-        <div id="comment-tab0" class="mdui-p-a-2">
-          <div id="gitalk-container"></div>
-<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
-<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
-<script src="//cdn.jsdelivr.net/npm/js-md5@0.7.3/src/md5.min.js"></script>
-<script>
-  var gitalk = new Gitalk({
-    clientID: '',
-    clientSecret: '',
-    repo: '',
-    owner: '',
-    admin: [''],
-    id:  md5(location.pathname) ,
-    distractionFreeMode: 'true',
-  });
-  gitalk.render('gitalk-container');
-</script>
+<div class="mdui-card mdui-p-a-4 mdui-m-b-5">
+    <div class="posts-collapse">
+        <div class="collection-title">
+            <h2>-ES6<small>Categories</small></h2>
         </div>
-      
-        <div id="comment-tab1" class="mdui-p-a-2">
-          <div id="lv-container" data-id="city" data-uid="">
-  <script type="text/javascript">
-    (function (d, s) {
-      var j, e = d.getElementsByTagName(s)[0];
-      if (typeof LivereTower === 'function') { return; }
-      j = d.createElement(s);
-      j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-      j.async = true;
-      e.parentNode.insertBefore(j, e);
-    })(document, 'script');
-  </script>
-  <noscript>Please enable JavaScript to view the comments powered by LiveRe.</noscript>
-</div>
-        </div>
-      
+        
+            <div class="collection-item">
+                <h3><a href="/2020/06/08/es6/">ES6基础</a></h3>
+                <time itemprop="dateCreated" datetime=2020-06-08 >
+                    2020.06.08
+                </time>
+            </div>
+        
     </div>
+</div>
+
+
 
   </main>
   <footer id="footer" class="mdui-text-center mdui-m-t-5 mdui-p-b-2 mdui-p-t-4 mdui-color-theme">
@@ -433,12 +267,6 @@
 
 
 
-
-    <script src="https://cdn.jsdelivr.net/npm/mermaid@8.4.8/dist/mermaid.min.js"></script>
-    <script>mermaid.initialize({
-        startOnLoad: true,
-        theme: "default"
-    });</script>
 
 
 

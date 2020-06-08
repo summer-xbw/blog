@@ -216,7 +216,7 @@
     </span>
     <span>
       <span class="iconfont icon-calendar-check"></span>
-      Edited on:&nbsp;2020-06-07
+      Edited on:&nbsp;2020-06-08
     </span>
     <span>
       <span class="iconfont icon-folder"></span>
@@ -359,8 +359,79 @@
 </ol>
 <hr>
 <h2 id="v-bind指令"><a href="#v-bind指令" class="headerlink" title="v-bind指令"></a>v-bind指令</h2><ul>
-<li>该指令可以动态绑定属性</li>
+<li>该指令可以动态绑定属性<ol>
+<li>使用方法  <pre><code>&lt;div id=&quot;app&quot;&gt;
+&lt;img v-bind:src=&quot;imgURL&quot; alt=&quot;&quot;&gt;
+&lt;/div&gt;</code></pre></li>
+<li>语法糖  <pre><code>&lt;div id=&quot;app&quot;&gt;
+&lt;img :src=&quot;imgURL&quot; alt=&quot;&quot;&gt;
+&lt;/div&gt;</code></pre></li>
+</ol>
+</li>
+<li>动态绑定class<ol>
+<li>使用方法  <pre><code>&lt;style&gt;
+.active {
+  color: red;
+}
+&lt;/style&gt;
+&lt;div id=&quot;app&quot;&gt;
+&lt;h2 :class=&quot;active&quot;&gt;hello&lt;/h2&gt;
+&lt;h2 :class=&quot;{类名1:boolean,类名2:boolean}&quot;&gt;hello&lt;/h2&gt;
+&lt;h2 :class=&quot;{key(css属性名):value(css属性值)}&quot;&gt;hello&lt;/h2&gt;
+&lt;/div&gt;</code></pre></li>
+</ol>
+</li>
 </ul>
+<hr>
+<h2 id="计算属性"><a href="#计算属性" class="headerlink" title="计算属性"></a>计算属性</h2><ol>
+<li><p>使用方法 </p>
+<pre><code>&lt;div id=&quot;app&quot;&gt;
+  &lt;h2&gt;{{fullStr}}&lt;/h2&gt;
+&lt;/div&gt;
+
+const app = new Vue({
+  el: &#39;#app&#39;,
+  data: {
+    firstStr: &#39;hello&#39;,
+    lastStr: &#39;world&#39;
+  },
+  computed: {
+    fullStr() {
+     return this.firstStr + &#39; &#39; + this.lastStr;
+    }
+  }
+})</code></pre></li>
+<li><p>setter和getter方法  </p>
+<pre><code>&lt;div id=&quot;app&quot;&gt;
+  &lt;h2&gt;{{fullStr}}&lt;/h2&gt;
+&lt;/div&gt;
+
+const app = new Vue({
+  el: &#39;#app&#39;,
+  data: {
+    firstStr: &#39;hello&#39;,
+    lastStr: &#39;world&#39;
+  },
+  computed: {
+    fullStr: function() {
+      set: function(value) { //大多数情况不写
+      const str = value.split(&#39; &#39;);
+      this.firstStr = str[0];
+      this.lastStr = str[1];
+      },
+      get: function() {
+        return this.firstStr + &#39; &#39; + this.lastStr;
+      }
+    }
+  }
+})</code></pre></li>
+<li><p><strong>computed</strong>和<strong>methods</strong>的对比</p>
+<ul>
+<li>多次使用时<strong>computed</strong>比<strong>methods</strong>性能高</li>
+<li><strong>Vue</strong>内部对<strong>computed</strong>做了缓存，多次使用只调用一次，只有内容发生改变时，才会重新调用、缓存；而<strong>methods</strong>是使用几次调用几次</li>
+</ul>
+</li>
+</ol>
 
   </div>
   <!--文末结束语-->
@@ -395,7 +466,7 @@
     <ul class="mdui-menu" id="toc">
       <li class="mdui-menu-item">
         <a href="/2020/06/05/vue/" id="toc-header" class="mdui-ripple">Table of Contents</a>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Vue安装的三种方式"><span class="toc-number">1.</span> <span class="toc-text">Vue安装的三种方式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#创建Vue实例传入的options"><span class="toc-number">2.</span> <span class="toc-text">创建Vue实例传入的options</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#插值操作"><span class="toc-number">3.</span> <span class="toc-text">插值操作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#v-bind指令"><span class="toc-number">4.</span> <span class="toc-text">v-bind指令</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Vue安装的三种方式"><span class="toc-number">1.</span> <span class="toc-text">Vue安装的三种方式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#创建Vue实例传入的options"><span class="toc-number">2.</span> <span class="toc-text">创建Vue实例传入的options</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#插值操作"><span class="toc-number">3.</span> <span class="toc-text">插值操作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#v-bind指令"><span class="toc-number">4.</span> <span class="toc-text">v-bind指令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#计算属性"><span class="toc-number">5.</span> <span class="toc-text">计算属性</span></a></li></ol>
       </li>
     </ul>
   </div>
