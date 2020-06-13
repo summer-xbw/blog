@@ -216,7 +216,7 @@
     </span>
     <span>
       <span class="iconfont icon-calendar-check"></span>
-      Edited on:&nbsp;2020-06-11
+      Edited on:&nbsp;2020-06-12
     </span>
     <span>
       <span class="iconfont icon-folder"></span>
@@ -508,6 +508,25 @@ const app = new Vue({
 </ol>
 </li>
 </ul>
+<hr>
+<h2 id="v-model"><a href="#v-model" class="headerlink" title="v-model"></a>v-model</h2><ul>
+<li>本质包含两个操作<ul>
+<li>v-bind绑定属性</li>
+<li>v-on给当前元素绑定事件</li>
+</ul>
+</li>
+<li>经常与<code>input</code> <code>textarea</code> <code>select</code>一块使用</li>
+<li>值绑定<ul>
+<li>标签中的值不写死，动态绑定</li>
+</ul>
+</li>
+<li>v-model的修饰符<ul>
+<li>lazy修饰符，不再实时绑定，当失去焦点或点击ENTER键时绑定  <pre><code>&lt;input type=&quot;text&quot; v-model.lazy=&quot;message&quot;&gt;</code></pre></li>
+<li>number修饰符，<code>input</code>限制只能输入数字时，v-model绑定的仍是string类型，加上number修饰符就是number类型  <pre><code>&lt;input type=&quot;number&quot; v-model.number=&quot;message&quot;&gt;</code></pre></li>
+<li>trim修饰符，去除两端的空格<pre><code>&lt;input type=&quot;text&quot; v-model.trim=&quot;message&quot;&gt;</code></pre></li>
+</ul>
+</li>
+</ul>
 
   </div>
   <!--文末结束语-->
@@ -542,7 +561,7 @@ const app = new Vue({
     <ul class="mdui-menu" id="toc">
       <li class="mdui-menu-item">
         <a href="/2020/06/05/vue/" id="toc-header" class="mdui-ripple">Table of Contents</a>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Vue安装的三种方式"><span class="toc-number">1.</span> <span class="toc-text">Vue安装的三种方式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#创建Vue实例传入的options"><span class="toc-number">2.</span> <span class="toc-text">创建Vue实例传入的options</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#插值操作"><span class="toc-number">3.</span> <span class="toc-text">插值操作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#v-bind指令"><span class="toc-number">4.</span> <span class="toc-text">v-bind指令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#计算属性"><span class="toc-number">5.</span> <span class="toc-text">计算属性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#v-on事件监听"><span class="toc-number">6.</span> <span class="toc-text">v-on事件监听</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#条件判断"><span class="toc-number">7.</span> <span class="toc-text">条件判断</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#循环遍历"><span class="toc-number">8.</span> <span class="toc-text">循环遍历</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Vue安装的三种方式"><span class="toc-number">1.</span> <span class="toc-text">Vue安装的三种方式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#创建Vue实例传入的options"><span class="toc-number">2.</span> <span class="toc-text">创建Vue实例传入的options</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#插值操作"><span class="toc-number">3.</span> <span class="toc-text">插值操作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#v-bind指令"><span class="toc-number">4.</span> <span class="toc-text">v-bind指令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#计算属性"><span class="toc-number">5.</span> <span class="toc-text">计算属性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#v-on事件监听"><span class="toc-number">6.</span> <span class="toc-text">v-on事件监听</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#条件判断"><span class="toc-number">7.</span> <span class="toc-text">条件判断</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#循环遍历"><span class="toc-number">8.</span> <span class="toc-text">循环遍历</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#v-model"><span class="toc-number">9.</span> <span class="toc-text">v-model</span></a></li></ol>
       </li>
     </ul>
   </div>

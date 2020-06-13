@@ -216,7 +216,7 @@
     </span>
     <span>
       <span class="iconfont icon-calendar-check"></span>
-      Edited on:&nbsp;2020-06-06
+      Edited on:&nbsp;2020-06-12
     </span>
     <span>
       <span class="iconfont icon-folder"></span>
@@ -280,7 +280,25 @@
 
   
   <div class="mdui-card-content mdui-typo mdui-p-x-4">
-    
+    <h2 id="高阶函数"><a href="#高阶函数" class="headerlink" title="高阶函数"></a>高阶函数</h2><ul>
+<li><strong>Array.prototype.map</strong><ul>
+<li><code>map()</code>函数会创建一个新的数组，数组中的元素是传进来的回调函数调用原来数组相同位置的元素的返回值</li>
+<li>传给<code>map()</code>的回调函数callback接收三个参数：<code>element</code> <code>index</code> <code>array</code></li>
+</ul>
+</li>
+<li><strong>Array.prototype.filter</strong><ul>
+<li><code>filter()</code>函数创建一个新的数组，数组里面存储原数组里面可以通过传进来的callback测试的元素</li>
+<li>传给<code>filter()</code>的回调函数接收三个参数：<code>element</code> <code>index</code> <code>array</code></li>
+</ul>
+</li>
+<li><strong>Array.prototype.reduce</strong><ul>
+<li><code>reduce</code>方法用被调用数组的元素依次作为参数调用传进来的callback然后产生一个返回值</li>
+<li><code>reduce</code>函数接收两个参数：一个是回调函数callback，一个是可选参数作为preValue的初始值</li>
+<li>callback函数接收4个参数：<code>preValue</code> <code>currentValue</code> <code>currentIndex</code> <code>sourceArray</code></li>
+</ul>
+</li>
+</ul>
+
   </div>
   <!--文末结束语-->
   
@@ -298,7 +316,7 @@
       </a>
     
     
-      <a rel="next" class="post-nav-item mdui-float-right" href="/2020/06/04/algorithm_notes/">
+      <a rel="next" class="post-nav-item mdui-float-right" href="/2020/06/04/algorithm-notes/">
         <span>JavaScript算法笔记</span>
         <i class="iconfont icon-angle-right"></i>
       </a>
@@ -314,7 +332,7 @@
     <ul class="mdui-menu" id="toc">
       <li class="mdui-menu-item">
         <a href="/2020/06/04/JavaScript/" id="toc-header" class="mdui-ripple">Table of Contents</a>
-        
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#高阶函数"><span class="toc-number">1.</span> <span class="toc-text">高阶函数</span></a></li></ol>
       </li>
     </ul>
   </div>
