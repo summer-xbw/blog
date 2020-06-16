@@ -4,11 +4,36 @@
   
     
     <entry>
+      <title>Webpack</title>
+      <link href="/2020/06/16/Webpack/"/>
+      <url>/2020/06/16/Webpack/</url>
+      
+        <content type="html"><![CDATA[<h2 id="Webpack（打包之后就没有用了）的安装"><a href="#Webpack（打包之后就没有用了）的安装" class="headerlink" title="Webpack（打包之后就没有用了）的安装"></a>Webpack（打包之后就没有用了）的安装</h2><ul><li><p>先安装node</p></li><li><p>查看node版本<br><code>node -v</code></p></li><li><p>全局安装Webpack<br><code>npm install webpack@版本号 -g</code></p></li><li><p>本地安装Webpack 和项目同步<br><code>npm install webpack@版本号 --save-dev</code>（–save-dev是开发时依赖，项目打包后不需要继续使用）</p></li><li><p>查看webpack版本<br><code>webpack --version</code></p><h2 id="Webpack文件夹解析"><a href="#Webpack文件夹解析" class="headerlink" title="Webpack文件夹解析"></a>Webpack文件夹解析</h2></li><li><p><strong>dist</strong>文件夹：用于存放之后打包的文件</p></li><li><p><strong>src</strong>文件夹：用于存放源文件</p></li><li><p><strong>index.html</strong>：首页</p></li><li><p><strong>package.json</strong>：通过<code>npm init</code>生成的，<strong>npm</strong>包管理的文件</p></li><li><p><strong>webpack.config.js</strong>：配置文件（文件名不可随意修改）  </p><pre><code>  // npm init   npm install  // 导入node中的path模块  const path = require(&#39;path&#39;);  // 映射webpack &#39;入口文件&#39; &#39;出口文件&#39;  module.exports = {      entry: &#39;./src/index.js&#39;,      output: {          path: path.join(__dirname,&#39;dist&#39;),          filename: &#39;bundle.js&#39;      }  }</code></pre></li><li><p><strong>package.json</strong>：依赖文件  </p><pre><code>  {      &quot;name&quot;: &quot;meetwebpack&quot;,      &quot;version&quot;: &quot;1.0.0&quot;,      &quot;description&quot;: &quot;&quot;,      &quot;main&quot;: &quot;webpack.config.js&quot;,      &quot;scripts&quot;: {          &quot;test&quot;: &quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;,          // 用于 npm run build映射 相当于运行webpack命令 会优先去本地找webpack，然后再去全局找，只要在终端中运行webpack就是全局          &quot;build&quot;: &quot;webpack&quot;      },      &quot;author&quot;: &quot;&quot;,      &quot;license&quot;: &quot;ISC&quot;      // 开发时依赖（开发阶段使用）      &quot;devDependencies&quot;: {          &quot;webpack&quot;: &quot;^3.6.0&quot;      }      // 打包后使用的依赖      &quot;dependencies&quot;: {      }  }</code></pre></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> -Webpack </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> -Webpack </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>HTML/CSS面试题解</title>
       <link href="/2020/06/16/html-css-interview/"/>
       <url>/2020/06/16/html-css-interview/</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<ol><li><p>下列哪些功能默认支持跨域？  </p><p> A. LocalStorage<br> B. Image<br> C. canvas<br> D. iframe </p><pre><code> 答案：B D 注解：     跨域：发起请求与指向资源域不相同（协议+域名+端口）     常见指向资源的部件有：&lt;a&gt;,&lt;form&gt;,&lt;script&gt;,&lt;img&gt;,&lt;iframe&gt;,&lt;link&gt;等标签以及Ajax请求     介绍两个概念：         1. localStorage：类似 sessionStorage，但其区别在于：存储在 localStorage 的数据可以长期保留；当页面被关闭时，存储在 sessionStorage 的数据会被清除。         2. 同源策略（same-origin policy）：是浏览器执行的一种安全措施，目的是为了保证用户信息的安全，防止恶意的网站窃取数据。     受到同源策略的影响，localStorage是无法进行跨域请求的，可以利用postMessage+ifarme来实行跨域通信     HTML 规范中图片有一个 crossOrigin 属性，结合合适的 CORS 响应头，就可以实现在canvas中使用跨域 &lt;img&gt; 元素的图像</code></pre></li><li><p>下列说法错误的是：</p><p>A. 在Blink和WebKit的浏览器中，某个元素具有3D或透视变换（perspective transform）的CSS属性，会让浏览器创建单独的图层。<br>B. 我们平常会使用left和top属性来修改元素的位置，但left和top会触发重布局，取而代之的更好方法是使用translate，这个不会触发重布局。<br>C. 移动端要想动画性能流畅，应该使用3D硬件加速，因此最好给页面中的元素尽量添加translate3d或者translateZ(0)来触发3D硬件加速。<br>D. 解决浏览器渲染的性能问题时，首要目标就是要避免层的重绘和重排。 </p><pre><code>答案：C注解：   滥用硬件加速会导致严重性能问题，因为它增加了内存使用，并且它会导致移动端电池寿命减少</code></pre></li><li><p>下面有关CSS中link和@import的区别，描述错误的是</p><p>A. link属于XHTML标签，而@import完全是CSS提供的一种方式<br>B. 当一个页面被加载的时候，link引用的CSS会同时被加载，而@import引用的CSS会等到页面全部被下载完再被加载<br>C. link在支持CSS的浏览器上都支持而@import只在5.0以上的版本有效<br>D. 当使用javascript控制dom去改变样式的时候，只能使用@import方式</p><pre><code>答案：D注解：     关于link与@import的区别:         区别1：link是XHTML标签，除了加载CSS外，还可以定义RSS等其他事务；@import属于CSS范畴，只能加载CSS。         区别2：link引用CSS时，在页面载入时同时加载；@import需要页面网页完全载入以后加载。         区别3：link是XHTML标签，无兼容问题；@import是在CSS2.1提出的，低版本的浏览器不支持。         区别4：link支持使用Javascript控制DOM去改变样式；而@import不支持。</code></pre></li></ol>]]></content>
       
       
       <categories>

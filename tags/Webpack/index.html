@@ -48,8 +48,8 @@
     
     
     <title>
-        
-            HTML/CSS面试题解 | Xbw的博客
+          
+            Xbw的博客
         
     </title>
     
@@ -203,196 +203,27 @@
 </aside>
   
   <main id="main-contain" class="mdui-container mdui-m-t-5">
-    <article id="article" class="mdui-card mdui-p-b-2 mdui-m-b-5">
-  <header class="mdui-card-media">
     
     
-      <div class="post-header"> 
-  <a class="post-header-title" href="/2020/06/16/html-css-interview/">HTML/CSS面试题解</a>
-  <div class="post-header-meta">
-    <span>
-      <span class="iconfont icon-calendar"></span>
-      Posted on:&nbsp;2020-06-16
-    </span>
-    <span>
-      <span class="iconfont icon-calendar-check"></span>
-      Edited on:&nbsp;2020-06-16
-    </span>
-    <span>
-      <span class="iconfont icon-folder"></span>
-      In:&nbsp;<a class="category-link" href="/categories/%E9%9D%A2%E8%AF%95/">-面试</a>
-    </span>
-    
-      <span>
-        <span class="iconfont icon-eye"></span>
-        Views:&nbsp;
-        <span id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv"></span></span>
-      </span>
-    
-  </div>
-</div>   
     
 
 
-
-    
-    
-    <div class="mdui-card-menu">
-    
-      <button class="mdui-btn mdui-btn-icon mdui-text-color-teal" mdui-menu="{target: '#share_menu', align: 'right'}"><i class="iconfont icon-share"></i></button>
-      <ul class="mdui-menu" id="share_menu">
-        <li class="mdui-menu-item">
-          <a href="http://service.weibo.com/share/share.php?appkey=&title=HTML/CSS面试题解&url=http://yoursite.com/2020/06/16/html-css-interview/&pic=http://yoursite.com/null&searchPic=false&style=simple" target="_blank" class="mdui-ripple">Share to Weibo</a>
-        </li>
-        <li class="mdui-menu-item">
-          <a href="https://twitter.com/intent/tweet?text=HTML/CSS面试题解&url=http://yoursite.com/2020/06/16/html-css-interview/&via=Xbw" target="_blank" class="mdui-ripple">Share to Twitter</a>
-        </li>
-        <li class="mdui-menu-item">
-          <a href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2020/06/16/html-css-interview/" target="_blank" class="mdui-ripple">Share to Facebook</a>
-        </li>
-        <li class="mdui-menu-item">
-          <a href="https://plus.google.com/share?url=http://yoursite.com/2020/06/16/html-css-interview/" target="_blank" class="mdui-ripple">Share to Google+</a>
-        </li>
-        <li class="mdui-menu-item">
-          <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://yoursite.com/2020/06/16/html-css-interview/&title=HTML/CSS面试题解" target="_blank" class="mdui-ripple">Share to LinkedIn</a>
-        </li>
-        <li class="mdui-menu-item">
-          <a href="http://connect.qq.com/widget/shareqq/index.html?site=Xbw的博客&title=HTML/CSS面试题解&summary=&pics=http://yoursite.com/null&url=http://yoursite.com/2020/06/16/html-css-interview/" target="_blank" class="mdui-ripple">Share to QQ</a>
-        </li>
-        <li class="mdui-menu-item">
-          <a href="https://telegram.me/share/url?url=http://yoursite.com/2020/06/16/html-css-interview/&text=HTML/CSS面试题解" target="_blank" class="mdui-ripple">Share to Telegram</a>
-        </li>
-      </ul>
-    
-  </div>
-  </header>
-  
-  
-  
-  
-  <div class="post-tags">
-    
-      <i class="iconfont icon-tag">
-        <a rel="tag" href = /tags/html-css%E9%9D%A2%E8%AF%95/ >-html/css面试</a>
-      </i>
-    
-  </div>
-
-  
-  <div class="mdui-card-content mdui-typo mdui-p-x-4">
-    <ol>
-<li><p>下列哪些功能默认支持跨域？  </p>
-<p> A. LocalStorage<br> B. Image<br> C. canvas<br> D. iframe </p>
-<pre><code> 答案：B D
- 注解：
-     跨域：发起请求与指向资源域不相同（协议+域名+端口）
-     常见指向资源的部件有：&lt;a&gt;,&lt;form&gt;,&lt;script&gt;,&lt;img&gt;,&lt;iframe&gt;,&lt;link&gt;等标签以及Ajax请求
-     介绍两个概念：
-         1. localStorage：类似 sessionStorage，但其区别在于：存储在 localStorage 的数据可以长期保留；当页面被关闭时，存储在 sessionStorage 的数据会被清除。
-         2. 同源策略（same-origin policy）：是浏览器执行的一种安全措施，目的是为了保证用户信息的安全，防止恶意的网站窃取数据。
-     受到同源策略的影响，localStorage是无法进行跨域请求的，可以利用postMessage+ifarme来实行跨域通信
-     HTML 规范中图片有一个 crossOrigin 属性，结合合适的 CORS 响应头，就可以实现在canvas中使用跨域 &lt;img&gt; 元素的图像</code></pre></li>
-<li><p>下列说法错误的是：</p>
-<p>A. 在Blink和WebKit的浏览器中，某个元素具有3D或透视变换（perspective transform）的CSS属性，会让浏览器创建单独的图层。<br>B. 我们平常会使用left和top属性来修改元素的位置，但left和top会触发重布局，取而代之的更好方法是使用translate，这个不会触发重布局。<br>C. 移动端要想动画性能流畅，应该使用3D硬件加速，因此最好给页面中的元素尽量添加translate3d或者translateZ(0)来触发3D硬件加速。<br>D. 解决浏览器渲染的性能问题时，首要目标就是要避免层的重绘和重排。 </p>
-<pre><code>答案：C
-注解：  
- 滥用硬件加速会导致严重性能问题，因为它增加了内存使用，并且它会导致移动端电池寿命减少</code></pre></li>
-<li><p>下面有关CSS中link和@import的区别，描述错误的是</p>
-<p>A. link属于XHTML标签，而@import完全是CSS提供的一种方式<br>B. 当一个页面被加载的时候，link引用的CSS会同时被加载，而@import引用的CSS会等到页面全部被下载完再被加载<br>C. link在支持CSS的浏览器上都支持而@import只在5.0以上的版本有效<br>D. 当使用javascript控制dom去改变样式的时候，只能使用@import方式</p>
-<pre><code>答案：D
-注解：
-     关于link与@import的区别:
-         区别1：link是XHTML标签，除了加载CSS外，还可以定义RSS等其他事务；@import属于CSS范畴，只能加载CSS。
-         区别2：link引用CSS时，在页面载入时同时加载；@import需要页面网页完全载入以后加载。
-         区别3：link是XHTML标签，无兼容问题；@import是在CSS2.1提出的，低版本的浏览器不支持。
-         区别4：link支持使用Javascript控制DOM去改变样式；而@import不支持。</code></pre></li>
-</ol>
-
-  </div>
-  <!--文末结束语-->
-  
-    <div style="text-align:center;color: #ccc;font-size:24px;"> --- 已经到底啦 <i class="iconfont icon-heartbeat" style="font-size:24px;"></i> The End --- </div>
-  
-  <!--页脚广告-->
-  
-  <div class="mdui-divider"></div>
-  
-  <nav>
-    
-      <a rel="prev" class="post-nav-item mdui-float-left" href="/2020/06/16/Webpack/">
-        <i class="iconfont icon-angle-left"></i>
-        <span>Webpack</span>
-      </a>
-    
-    
-      <a rel="next" class="post-nav-item mdui-float-right" href="/2020/06/12/vue-module/">
-        <span>Vue组件化</span>
-        <i class="iconfont icon-angle-right"></i>
-      </a>
-    
-  </nav>
-</article>
-
-
-
-
-  <div class="toc-button"  style="z-index: 100;">
-    <button class="mdui-fab mdui-ripple mdui-color-teal" mdui-menu="{target: '#toc'}"><i class="iconfont icon-list"></i></button>
-    <ul class="mdui-menu" id="toc">
-      <li class="mdui-menu-item">
-        <a href="/2020/06/16/html-css-interview/" id="toc-header" class="mdui-ripple">Table of Contents</a>
-        
-      </li>
-    </ul>
-  </div>
-
-
-
-    <div id="comment" class="mdui-card mdui-p-a-2 mdui-m-b-5">
-      <div class="mdui-tab" mdui-tab>
-        
-          <a href="#comment-tab0" class="mdui-ripple">gitalk</a>
-        
-          <a href="#comment-tab1" class="mdui-ripple">livere</a>
-        
-      </div>
-      
-        <div id="comment-tab0" class="mdui-p-a-2">
-          <div id="gitalk-container"></div>
-<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
-<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
-<script src="//cdn.jsdelivr.net/npm/js-md5@0.7.3/src/md5.min.js"></script>
-<script>
-  var gitalk = new Gitalk({
-    clientID: '',
-    clientSecret: '',
-    repo: '',
-    owner: '',
-    admin: [''],
-    id:  md5(location.pathname) ,
-    distractionFreeMode: 'true',
-  });
-  gitalk.render('gitalk-container');
-</script>
+<div class="mdui-card mdui-p-a-4 mdui-m-b-5">
+    <div class="posts-collapse">
+        <div class="collection-title">
+            <h2>-Webpack<small>Tags</small></h2>
         </div>
-      
-        <div id="comment-tab1" class="mdui-p-a-2">
-          <div id="lv-container" data-id="city" data-uid="">
-  <script type="text/javascript">
-    (function (d, s) {
-      var j, e = d.getElementsByTagName(s)[0];
-      if (typeof LivereTower === 'function') { return; }
-      j = d.createElement(s);
-      j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-      j.async = true;
-      e.parentNode.insertBefore(j, e);
-    })(document, 'script');
-  </script>
-  <noscript>Please enable JavaScript to view the comments powered by LiveRe.</noscript>
-</div>
-        </div>
-      
+        
+            <div class="collection-item">
+                <h3><a href="/2020/06/16/Webpack/">Webpack</a></h3>
+                <time itemprop="dateCreated" datetime=2020-06-16 >
+                    2020.06.16
+                </time>
+            </div>
+        
     </div>
+</div>
+
 
   </main>
   <footer id="footer" class="mdui-text-center mdui-m-t-5 mdui-p-b-2 mdui-p-t-4 mdui-color-theme">
@@ -435,12 +266,6 @@
 
 
 
-
-    <script src="https://cdn.jsdelivr.net/npm/mermaid@8.4.8/dist/mermaid.min.js"></script>
-    <script>mermaid.initialize({
-        startOnLoad: true,
-        theme: "default"
-    });</script>
 
 
 
