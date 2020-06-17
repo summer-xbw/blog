@@ -216,7 +216,7 @@
     </span>
     <span>
       <span class="iconfont icon-calendar-check"></span>
-      Edited on:&nbsp;2020-06-16
+      Edited on:&nbsp;2020-06-17
     </span>
     <span>
       <span class="iconfont icon-folder"></span>
@@ -281,16 +281,14 @@
   
   <div class="mdui-card-content mdui-typo mdui-p-x-4">
     <h2 id="Webpack（打包之后就没有用了）的安装"><a href="#Webpack（打包之后就没有用了）的安装" class="headerlink" title="Webpack（打包之后就没有用了）的安装"></a>Webpack（打包之后就没有用了）的安装</h2><ul>
-<li><p>先安装node</p>
-</li>
-<li><p>查看node版本<br><code>node -v</code></p>
-</li>
-<li><p>全局安装Webpack<br><code>npm install webpack@版本号 -g</code></p>
-</li>
-<li><p>本地安装Webpack 和项目同步<br><code>npm install webpack@版本号 --save-dev</code>（–save-dev是开发时依赖，项目打包后不需要继续使用）</p>
-</li>
-<li><p>查看webpack版本<br><code>webpack --version</code></p>
-<h2 id="Webpack文件夹解析"><a href="#Webpack文件夹解析" class="headerlink" title="Webpack文件夹解析"></a>Webpack文件夹解析</h2></li>
+<li>先安装node</li>
+<li>查看node版本<br><code>node -v</code></li>
+<li>全局安装Webpack<br><code>npm install webpack@版本号 -g</code></li>
+<li>本地安装Webpack 和项目同步<br><code>npm install webpack@版本号 --save-dev</code>（–save-dev是开发时依赖，项目打包后不需要继续使用）</li>
+<li>查看webpack版本<br><code>webpack --version</code></li>
+</ul>
+<hr>
+<h2 id="Webpack文件夹解析"><a href="#Webpack文件夹解析" class="headerlink" title="Webpack文件夹解析"></a>Webpack文件夹解析</h2><ul>
 <li><p><strong>dist</strong>文件夹：用于存放之后打包的文件</p>
 </li>
 <li><p><strong>src</strong>文件夹：用于存放源文件</p>
@@ -334,6 +332,111 @@
       }
   }</code></pre></li>
 </ul>
+<hr>
+<h2 id="Webpack扩充loader"><a href="#Webpack扩充loader" class="headerlink" title="Webpack扩充loader"></a>Webpack扩充loader</h2><ul>
+<li>使用过程<ul>
+<li>npm安装loader<br><code>npm install --save-dev css-loader</code><br><code>npm install style-loader --save-dev</code><br><code>npm install --save-dev less-loader less</code><br><code>npm install --save-dev url-loader</code><br><code>npm install --save-dev babel-loader@7 babel-core babel-preset-es2015</code></li>
+<li>webpack.comfig.js中的modules关键字下配置，加入以下代码  <pre><code>entry: &#39;./src/index.js&#39;,
+    output: {
+    path: path.join(__dirname,&#39;dist&#39;),
+    filename: &#39;bundle.js&#39;,
+    // file-loader加载图片时配置图片路径
+    publicPath: &#39;dist/&#39;
+},
+module: {
+    rules: [
+        {
+            // 正则 .css结尾
+            test: /\.css$/,
+            // css-loader只负责加载
+            // style-loader负责将样式添加到dom中
+            // webpack读取多个loader时从右往左读
+            use: [ &#39;style-loader&#39;,&#39;css-loader&#39; ]
+        },
+        {
+            test: /\.less$/,
+            use: [{
+                loader: &quot;style-loader&quot; // creates style nodes from JS strings
+            }, {
+                loader: &quot;css-loader&quot; // translates CSS into CommonJS
+            }, {
+                loader: &quot;less-loader&quot; // compiles Less to CSS
+            }]
+        },
+        {
+            test: /\.(png|jpg|gif)$/,
+            use: [
+                {
+                    loader: &#39;url-loader&#39;,
+                    options: {
+                        // 加载的图片小于limit时，会将图片编译成base64字符串形式，大于limit要使用file-loader加载（这里要配置publicPath）
+                        limit: 8192,
+                        // 规范打包后的图片名字 img文件夹/原来的图片名.8位hash值.原有扩展名
+                        name: &#39;img/[name].[hash:8].[ext]&#39;
+                    }
+                }
+            ]
+        },
+        {
+            test: /\.js$/,
+            // 排除：当打包es6--&gt;es5转化时 只转化src文件夹内的内容
+            exclude: /(node_modules|bower_components)/,
+            use: {
+                loader: &#39;babel-loader&#39;,
+                options: {
+                    // presets: [&#39;@babel/preset-env&#39;]
+                    presets: [&#39;es2015&#39;]
+                }
+            }
+        }
+    ]
+}</code></pre></li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="Webpack引入Vue"><a href="#Webpack引入Vue" class="headerlink" title="Webpack引入Vue"></a>Webpack引入Vue</h2><ul>
+<li>npm下载Vue<br><code>npm install vue --save</code></li>
+<li>打包编译时报<code>You are using the runtime-only build of Vue where the template compiler is not available. Either pre-compile the templates into render functions, or use the compiler-included build.</code>错误<ul>
+<li>解释：<ul>
+<li>runtime-only-&gt;代码中不可以有任何的template</li>
+<li>runtime-compliler-&gt;代码中可以有template，因为有compliler可以编译template</li>
+</ul>
+</li>
+<li>解决（配置webpack.config.js）:<pre><code>module.exports = {
+    entry: &#39;./src/index.js&#39;,
+    output: {
+        path: path.join(__dirname,&#39;dist&#39;),
+        filename: &#39;bundle.js&#39;,
+        publicPath: &#39;dist/&#39;
+    },
+    module: {
+    },
+    resolve: {
+        // 别名
+        alias: {
+        // 指定Vue版本 其中含有compliler
+        &#39;vue$&#39;: &#39;vue/dist/vue.esm.js&#39;
+        }
+    }
+}</code></pre></li>
+</ul>
+</li>
+<li>SPA（simple page web application单页面应用：只有一个html）<ul>
+<li>可以通过vue-router（前端路由跳转）</li>
+</ul>
+</li>
+<li>new Vue中的el属性和template属性同时存在时 Vue内部会把template替换到el挂载的元素</li>
+<li>安装vue-loader（加载Vue文件）和vue-template-compiler（编译Vue）<br><code>npm install vue-loader vue-template-compiler --save-dev</code></li>
+<li>webpack.config.js中配置vue-loader  <pre><code>module: {
+  rules: [
+      {
+          test:/\.vue$/,
+          use: [ &#39;vue-loader&#39; ]
+      }
+  ]
+}</code></pre></li>
+</ul>
 
   </div>
   <!--文末结束语-->
@@ -363,7 +466,7 @@
     <ul class="mdui-menu" id="toc">
       <li class="mdui-menu-item">
         <a href="/2020/06/16/Webpack/" id="toc-header" class="mdui-ripple">Table of Contents</a>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Webpack（打包之后就没有用了）的安装"><span class="toc-number">1.</span> <span class="toc-text">Webpack（打包之后就没有用了）的安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Webpack文件夹解析"><span class="toc-number">2.</span> <span class="toc-text">Webpack文件夹解析</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Webpack（打包之后就没有用了）的安装"><span class="toc-number">1.</span> <span class="toc-text">Webpack（打包之后就没有用了）的安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Webpack文件夹解析"><span class="toc-number">2.</span> <span class="toc-text">Webpack文件夹解析</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Webpack扩充loader"><span class="toc-number">3.</span> <span class="toc-text">Webpack扩充loader</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Webpack引入Vue"><span class="toc-number">4.</span> <span class="toc-text">Webpack引入Vue</span></a></li></ol>
       </li>
     </ul>
   </div>
