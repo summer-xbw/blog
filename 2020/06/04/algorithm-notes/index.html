@@ -216,7 +216,7 @@
     </span>
     <span>
       <span class="iconfont icon-calendar-check"></span>
-      Edited on:&nbsp;2020-06-12
+      Edited on:&nbsp;2020-06-18
     </span>
     <span>
       <span class="iconfont icon-folder"></span>
@@ -280,7 +280,21 @@
 
   
   <div class="mdui-card-content mdui-typo mdui-p-x-4">
-    
+    <h3 id="字符串相关"><a href="#字符串相关" class="headerlink" title="字符串相关"></a>字符串相关</h3><ol>
+<li><ul>
+<li>给出一个字符串”adadfdfseffqdjhuserfefsefseetsdg”</li>
+<li>要求：找出里边的字符串qdjhu</li>
+<li>题解：<pre><code>   let string = &#39;adadfdfseffqdjhuserfefsefseetsdg&#39;
+   let search = &#39;qdjhu&#39;
+   // 找到search在string中开始的位置
+   let indexStart = string.indexOf(search)
+   let indexEnd = indexStart + search.length
+   let result  = string.substring(indexStart,indexEnd)
+   console.log(result)</code></pre></li>
+</ul>
+</li>
+</ol>
+
   </div>
   <!--文末结束语-->
   
@@ -309,7 +323,7 @@
     <ul class="mdui-menu" id="toc">
       <li class="mdui-menu-item">
         <a href="/2020/06/04/algorithm-notes/" id="toc-header" class="mdui-ripple">Table of Contents</a>
-        
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#字符串相关"><span class="toc-number">1.</span> <span class="toc-text">字符串相关</span></a></li></ol>
       </li>
     </ul>
   </div>

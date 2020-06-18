@@ -216,7 +216,7 @@
     </span>
     <span>
       <span class="iconfont icon-calendar-check"></span>
-      Edited on:&nbsp;2020-06-17
+      Edited on:&nbsp;2020-06-18
     </span>
     <span>
       <span class="iconfont icon-folder"></span>
@@ -437,6 +437,79 @@ module: {
   ]
 }</code></pre></li>
 </ul>
+<hr>
+<h2 id="Webpack中的plugin"><a href="#Webpack中的plugin" class="headerlink" title="Webpack中的plugin"></a>Webpack中的plugin</h2><ul>
+<li>plugin<ul>
+<li>plugin是插件的意思，用于对某个现有的架构进行扩展</li>
+<li>webpack中的插件就是对webpack现有功能的扩展（比如打包优化、文件压缩）</li>
+</ul>
+</li>
+<li>loader和plugin的区别<ul>
+<li>loader主要用于转换某些类型的模块，是一个转换器</li>
+<li>plugin是插件，是对webpack本身的扩展，是一个扩展器</li>
+</ul>
+</li>
+<li>plugin的使用<ul>
+<li>通过npm安装plugin（webpack已内置的插件无需安装）</li>
+<li>在webpack.config.js中的plugins中配置插件</li>
+</ul>
+</li>
+<li>plugin类型<ul>
+<li>BannerPlugin：webpack自带插件，为打包的文件添加版权声明  <pre><code>```
+const webpack = require(&#39;webpack&#39;)
+module.exports = {
+    plugins: [
+        new webpack.BannerPlugin(&#39;最终版权归...所有&#39;)
+    ]
+}
+```</code></pre></li>
+<li>HtmlWebpackPlugin：打包html的插件<ul>
+<li>注：发布项目时，dist文件夹中要有index.html</li>
+<li>自动生成一个index.html文件（可以指定模板生成）</li>
+<li>将打包的js文件，自动通过script标签插入到body中</li>
+<li>安装HtmlWebpackPlugin<pre><code>  npm install html-webpack-plugin --save-dev</code></pre><ul>
+<li>配置webpack.config.js中的plugins<pre><code>const HtmlWebpackPlugin = require(&#39;html-webpack-plugin&#39;)
+plugins: [
+    // 需要注释掉出口文件中的publicPath
+    new HtmlWebpackPlugin({
+        // 指定打包时的模板
+        template: &#39;index.html&#39;
+    })
+]</code></pre></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>uglifyjs-webpack-plugin：压缩打包后的js文件<ul>
+<li>安装<br>  <code>npm uglifyjs-webpack-plugin@1.1.1 --save-dev</code></li>
+<li>配置<pre><code>  const uglifyJsWebpackPlugin = require(&#39;uglifyjs-webpack-plugin&#39;)
+  plugins: [
+      new uglifyJsWebpackPlugin()
+  ]</code></pre></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="基于node-js（使用express）搭建本地服务器"><a href="#基于node-js（使用express）搭建本地服务器" class="headerlink" title="基于node.js（使用express）搭建本地服务器"></a>基于node.js（使用express）搭建本地服务器</h2><ul>
+<li>安装模块<br><code>npm install webpack-dev-server@2.9.3 --save-dev</code></li>
+<li>devserver是webpack中的一个选项，有以下属性<ul>
+<li>contentBase：为哪个文件夹提供本地服务，默认是根文件夹，改为./dist</li>
+<li>port：端口号</li>
+<li>inline：页面实时刷新</li>
+<li>historyApiFallback：在SPA模式中，依赖HTML5的history模式</li>
+<li>配置webpack.config.js文件  <pre><code>```
+devServer: {
+    contentBase: &#39;./dist&#39;,
+    inline: true,
+    // 自动打开网页
+    open: true
+}
+```  </code></pre></li>
+</ul>
+</li>
+</ul>
 
   </div>
   <!--文末结束语-->
@@ -448,6 +521,11 @@ module: {
   <div class="mdui-divider"></div>
   
   <nav>
+    
+      <a rel="prev" class="post-nav-item mdui-float-left" href="/2020/06/18/Vue-CLI/">
+        <i class="iconfont icon-angle-left"></i>
+        <span>Vue-CLI</span>
+      </a>
     
     
       <a rel="next" class="post-nav-item mdui-float-right" href="/2020/06/16/html-css-interview/">
@@ -466,7 +544,7 @@ module: {
     <ul class="mdui-menu" id="toc">
       <li class="mdui-menu-item">
         <a href="/2020/06/16/Webpack/" id="toc-header" class="mdui-ripple">Table of Contents</a>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Webpack（打包之后就没有用了）的安装"><span class="toc-number">1.</span> <span class="toc-text">Webpack（打包之后就没有用了）的安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Webpack文件夹解析"><span class="toc-number">2.</span> <span class="toc-text">Webpack文件夹解析</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Webpack扩充loader"><span class="toc-number">3.</span> <span class="toc-text">Webpack扩充loader</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Webpack引入Vue"><span class="toc-number">4.</span> <span class="toc-text">Webpack引入Vue</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Webpack（打包之后就没有用了）的安装"><span class="toc-number">1.</span> <span class="toc-text">Webpack（打包之后就没有用了）的安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Webpack文件夹解析"><span class="toc-number">2.</span> <span class="toc-text">Webpack文件夹解析</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Webpack扩充loader"><span class="toc-number">3.</span> <span class="toc-text">Webpack扩充loader</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Webpack引入Vue"><span class="toc-number">4.</span> <span class="toc-text">Webpack引入Vue</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Webpack中的plugin"><span class="toc-number">5.</span> <span class="toc-text">Webpack中的plugin</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#基于node-js（使用express）搭建本地服务器"><span class="toc-number">6.</span> <span class="toc-text">基于node.js（使用express）搭建本地服务器</span></a></li></ol>
       </li>
     </ul>
   </div>

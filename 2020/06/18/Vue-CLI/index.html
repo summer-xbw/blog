@@ -48,8 +48,8 @@
     
     
     <title>
-          
-            Xbw的博客
+        
+            Vue-CLI | Xbw的博客
         
     </title>
     
@@ -203,122 +203,193 @@
 </aside>
   
   <main id="main-contain" class="mdui-container mdui-m-t-5">
+    <article id="article" class="mdui-card mdui-p-b-2 mdui-m-b-5">
+  <header class="mdui-card-media">
+    
+    
+      <div class="post-header"> 
+  <a class="post-header-title" href="/2020/06/18/Vue-CLI/">Vue-CLI</a>
+  <div class="post-header-meta">
+    <span>
+      <span class="iconfont icon-calendar"></span>
+      Posted on:&nbsp;2020-06-18
+    </span>
+    <span>
+      <span class="iconfont icon-calendar-check"></span>
+      Edited on:&nbsp;2020-06-18
+    </span>
+    <span>
+      <span class="iconfont icon-folder"></span>
+      In:&nbsp;<a class="category-link" href="/categories/Vue/">-Vue</a>
+    </span>
+    
+      <span>
+        <span class="iconfont icon-eye"></span>
+        Views:&nbsp;
+        <span id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv"></span></span>
+      </span>
+    
+  </div>
+</div>   
     
 
-<div class="mdui-card mdui-p-a-4 mdui-m-b-5">
-    <div class="page-describe">
-        10 posts in total.
-    </div>
-    <div class="posts-collapse">
-        
-            
-            
-                <div class="collection-title">
-                    <a href="/archives/2020"><h2>2020<small>Archives</small></h2></a>
-                </div>
-                
-            
 
-            <div class="collection-item">
-                <h3><a href="/2020/06/18/Vue-CLI/">Vue-CLI</a></h3>
-                <time itemprop="dateCreated" datetime=2020-06-18 >
-                    2020.06.18
-                </time>
-            </div>
-        
-            
-            
 
-            <div class="collection-item">
-                <h3><a href="/2020/06/16/Webpack/">Webpack</a></h3>
-                <time itemprop="dateCreated" datetime=2020-06-16 >
-                    2020.06.16
-                </time>
-            </div>
-        
-            
-            
+    
+    
+    <div class="mdui-card-menu">
+    
+      <button class="mdui-btn mdui-btn-icon mdui-text-color-teal" mdui-menu="{target: '#share_menu', align: 'right'}"><i class="iconfont icon-share"></i></button>
+      <ul class="mdui-menu" id="share_menu">
+        <li class="mdui-menu-item">
+          <a href="http://service.weibo.com/share/share.php?appkey=&title=Vue-CLI&url=http://yoursite.com/2020/06/18/Vue-CLI/&pic=http://yoursite.com/null&searchPic=false&style=simple" target="_blank" class="mdui-ripple">Share to Weibo</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="https://twitter.com/intent/tweet?text=Vue-CLI&url=http://yoursite.com/2020/06/18/Vue-CLI/&via=Xbw" target="_blank" class="mdui-ripple">Share to Twitter</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2020/06/18/Vue-CLI/" target="_blank" class="mdui-ripple">Share to Facebook</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="https://plus.google.com/share?url=http://yoursite.com/2020/06/18/Vue-CLI/" target="_blank" class="mdui-ripple">Share to Google+</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://yoursite.com/2020/06/18/Vue-CLI/&title=Vue-CLI" target="_blank" class="mdui-ripple">Share to LinkedIn</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="http://connect.qq.com/widget/shareqq/index.html?site=Xbw的博客&title=Vue-CLI&summary=&pics=http://yoursite.com/null&url=http://yoursite.com/2020/06/18/Vue-CLI/" target="_blank" class="mdui-ripple">Share to QQ</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="https://telegram.me/share/url?url=http://yoursite.com/2020/06/18/Vue-CLI/&text=Vue-CLI" target="_blank" class="mdui-ripple">Share to Telegram</a>
+        </li>
+      </ul>
+    
+  </div>
+  </header>
+  
+  
+  
+  
+  <div class="post-tags">
+    
+      <i class="iconfont icon-tag">
+        <a rel="tag" href = /tags/Vue%E8%84%9A%E6%89%8B%E6%9E%B6/ >-Vue脚手架</a>
+      </i>
+    
+  </div>
 
-            <div class="collection-item">
-                <h3><a href="/2020/06/16/html-css-interview/">HTML/CSS面试题解</a></h3>
-                <time itemprop="dateCreated" datetime=2020-06-16 >
-                    2020.06.16
-                </time>
-            </div>
-        
-            
-            
+  
+  <div class="mdui-card-content mdui-typo mdui-p-x-4">
+    <h2 id="Vue-CLI的使用"><a href="#Vue-CLI的使用" class="headerlink" title="Vue CLI的使用"></a>Vue CLI的使用</h2><ul>
+<li>安装Vue脚手架<br><code>npm install -g @vue/cli</code></li>
+<li>拉取 2.x 模板 (旧版本)<br><code>npm install -g @vue/cli-init</code></li>
+<li>Vue CLI2初始化项目<br><code>vue init webpack my-project</code></li>
+<li>runtime+compiler和runtime-only的区别在于main.js文件<ul>
+<li>runtime+compiler中的main.js<pre><code>new Vue({
+  el: &#39;#app&#39;,
+  // components: { App },
+  // template: &#39;&lt;App/&gt;&#39;
+  // 普通用法
+  render: function(createElement) {
+    return createElement(&#39;标签&#39;,
+    {标签的属性},
+    [标签的内容],
+    createElement(&#39;标签&#39;,[标签内容]))
+  }
+  // 传入组件对象（就和runtime-only相同了）
+  render: functiong(createElement){
+    return createElement(&#39;组件名称&#39;)
+  }
+})</code></pre></li>
+<li>runtime-only中的main.js<pre><code>new Vue({
+  el: &#39;#app&#39;,
+  render: h =&gt; h(App)
+})</code></pre></li>
+<li>这里借用一篇博客来理解<br><a href="https://blog.csdn.net/Xidian2850/article/details/103793913" target="_blank">文殊师利法王子</a></li>
+</ul>
+</li>
+</ul>
 
-            <div class="collection-item">
-                <h3><a href="/2020/06/12/vue-module/">Vue组件化</a></h3>
-                <time itemprop="dateCreated" datetime=2020-06-12 >
-                    2020.06.12
-                </time>
-            </div>
-        
-            
-            
+  </div>
+  <!--文末结束语-->
+  
+    <div style="text-align:center;color: #ccc;font-size:24px;"> --- 已经到底啦 <i class="iconfont icon-heartbeat" style="font-size:24px;"></i> The End --- </div>
+  
+  <!--页脚广告-->
+  
+  <div class="mdui-divider"></div>
+  
+  <nav>
+    
+    
+      <a rel="next" class="post-nav-item mdui-float-right" href="/2020/06/16/Webpack/">
+        <span>Webpack</span>
+        <i class="iconfont icon-angle-right"></i>
+      </a>
+    
+  </nav>
+</article>
 
-            <div class="collection-item">
-                <h3><a href="/2020/06/11/vue-virtual-dom/">Vue中的Virtual DOM</a></h3>
-                <time itemprop="dateCreated" datetime=2020-06-11 >
-                    2020.06.11
-                </time>
-            </div>
-        
-            
-            
 
-            <div class="collection-item">
-                <h3><a href="/2020/06/08/es6/">ES6基础</a></h3>
-                <time itemprop="dateCreated" datetime=2020-06-08 >
-                    2020.06.08
-                </time>
-            </div>
-        
-            
-            
 
-            <div class="collection-item">
-                <h3><a href="/2020/06/06/vue-mvvm/">Vue中的MVVM</a></h3>
-                <time itemprop="dateCreated" datetime=2020-06-06 >
-                    2020.06.06
-                </time>
-            </div>
-        
-            
-            
 
-            <div class="collection-item">
-                <h3><a href="/2020/06/05/vue/">Vue基础</a></h3>
-                <time itemprop="dateCreated" datetime=2020-06-05 >
-                    2020.06.05
-                </time>
-            </div>
-        
-            
-            
+  <div class="toc-button"  style="z-index: 100;">
+    <button class="mdui-fab mdui-ripple mdui-color-teal" mdui-menu="{target: '#toc'}"><i class="iconfont icon-list"></i></button>
+    <ul class="mdui-menu" id="toc">
+      <li class="mdui-menu-item">
+        <a href="/2020/06/18/Vue-CLI/" id="toc-header" class="mdui-ripple">Table of Contents</a>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Vue-CLI的使用"><span class="toc-number">1.</span> <span class="toc-text">Vue CLI的使用</span></a></li></ol>
+      </li>
+    </ul>
+  </div>
 
-            <div class="collection-item">
-                <h3><a href="/2020/06/04/JavaScript/">JavaScript基础</a></h3>
-                <time itemprop="dateCreated" datetime=2020-06-04 >
-                    2020.06.04
-                </time>
-            </div>
-        
-            
-            
 
-            <div class="collection-item">
-                <h3><a href="/2020/06/04/algorithm-notes/">JavaScript算法笔记</a></h3>
-                <time itemprop="dateCreated" datetime=2020-06-04 >
-                    2020.06.04
-                </time>
-            </div>
+
+    <div id="comment" class="mdui-card mdui-p-a-2 mdui-m-b-5">
+      <div class="mdui-tab" mdui-tab>
         
-    </div>
+          <a href="#comment-tab0" class="mdui-ripple">gitalk</a>
+        
+          <a href="#comment-tab1" class="mdui-ripple">livere</a>
+        
+      </div>
+      
+        <div id="comment-tab0" class="mdui-p-a-2">
+          <div id="gitalk-container"></div>
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/js-md5@0.7.3/src/md5.min.js"></script>
+<script>
+  var gitalk = new Gitalk({
+    clientID: '',
+    clientSecret: '',
+    repo: '',
+    owner: '',
+    admin: [''],
+    id:  md5(location.pathname) ,
+    distractionFreeMode: 'true',
+  });
+  gitalk.render('gitalk-container');
+</script>
+        </div>
+      
+        <div id="comment-tab1" class="mdui-p-a-2">
+          <div id="lv-container" data-id="city" data-uid="">
+  <script type="text/javascript">
+    (function (d, s) {
+      var j, e = d.getElementsByTagName(s)[0];
+      if (typeof LivereTower === 'function') { return; }
+      j = d.createElement(s);
+      j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+      j.async = true;
+      e.parentNode.insertBefore(j, e);
+    })(document, 'script');
+  </script>
+  <noscript>Please enable JavaScript to view the comments powered by LiveRe.</noscript>
 </div>
-
+        </div>
+      
+    </div>
 
   </main>
   <footer id="footer" class="mdui-text-center mdui-m-t-5 mdui-p-b-2 mdui-p-t-4 mdui-color-theme">
@@ -361,6 +432,12 @@
 
 
 
+
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@8.4.8/dist/mermaid.min.js"></script>
+    <script>mermaid.initialize({
+        startOnLoad: true,
+        theme: "default"
+    });</script>
 
 
 
