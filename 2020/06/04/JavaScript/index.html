@@ -216,7 +216,7 @@
     </span>
     <span>
       <span class="iconfont icon-calendar-check"></span>
-      Edited on:&nbsp;2020-06-12
+      Edited on:&nbsp;2020-06-19
     </span>
     <span>
       <span class="iconfont icon-folder"></span>
@@ -280,7 +280,45 @@
 
   
   <div class="mdui-card-content mdui-typo mdui-p-x-4">
-    <h2 id="高阶函数"><a href="#高阶函数" class="headerlink" title="高阶函数"></a>高阶函数</h2><ul>
+    <h2 id="字符串方法"><a href="#字符串方法" class="headerlink" title="字符串方法"></a>字符串方法</h2><ul>
+<li><code>indexOf()</code>方法返回字符串中指定文本首次出现的索引（位置）</li>
+<li><code>lastIndexOf()</code>方法返回指定文本在字符串中最后一次出现的索引（位置）  </li>
+</ul>
+<p><strong>注意：如未找到，indexOf()和lastIndexOf()均返回-1</strong></p>
+<ul>
+<li><code>search()</code>方法搜索特定值的字符串，并返回匹配的位置</li>
+<li><code>slice()</code>方法提取部分字符串，可接受负索引<ul>
+<li>参数一：起始索引</li>
+<li>参数二：终止索引，省略，则提取起始索引往后的内容</li>
+</ul>
+</li>
+<li><code>substring()</code>方法类似于<code>slice()</code>，不可接受负索引</li>
+<li><code>substr()</code>方法类似于<code>slice()</code>，不同于第二个参数<ul>
+<li>参数一：起始位置</li>
+<li>参数二：提取内容的长度，省略，则提取起始索引往后的内容</li>
+</ul>
+</li>
+<li><code>replace()</code>方法用于替换字符串中的值<ul>
+<li>参数一：要替换的值</li>
+<li>参数二：用什么替换</li>
+</ul>
+</li>
+<li><code>toUpperCase()</code>方法把字符串转换为大写</li>
+<li><code>toLowerCase()</code>方法把字符串转换为小写</li>
+<li><code>concat()</code>方法连接两个或多个字符串</li>
+<li><code>trim()</code>方法去除字符串两端的空白</li>
+<li><code>charAt()</code>方法返回字符串中指定下标的字符串<ul>
+<li>参数：索引（位置）</li>
+</ul>
+</li>
+<li><code>charCodeAt()</code>方法返回字符串中指定索引的字符的unicode编码</li>
+<li><code>split()</code>方法把字符串转换为数组<ul>
+<li>参数：分隔符，可省略</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="高阶函数"><a href="#高阶函数" class="headerlink" title="高阶函数"></a>高阶函数</h2><ul>
 <li><strong>Array.prototype.map</strong><ul>
 <li><code>map()</code>函数会创建一个新的数组，数组中的元素是传进来的回调函数调用原来数组相同位置的元素的返回值</li>
 <li>传给<code>map()</code>的回调函数callback接收三个参数：<code>element</code> <code>index</code> <code>array</code></li>
@@ -332,7 +370,7 @@
     <ul class="mdui-menu" id="toc">
       <li class="mdui-menu-item">
         <a href="/2020/06/04/JavaScript/" id="toc-header" class="mdui-ripple">Table of Contents</a>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#高阶函数"><span class="toc-number">1.</span> <span class="toc-text">高阶函数</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#字符串方法"><span class="toc-number">1.</span> <span class="toc-text">字符串方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#高阶函数"><span class="toc-number">2.</span> <span class="toc-text">高阶函数</span></a></li></ol>
       </li>
     </ul>
   </div>

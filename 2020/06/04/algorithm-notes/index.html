@@ -216,7 +216,7 @@
     </span>
     <span>
       <span class="iconfont icon-calendar-check"></span>
-      Edited on:&nbsp;2020-06-18
+      Edited on:&nbsp;2020-06-19
     </span>
     <span>
       <span class="iconfont icon-folder"></span>
@@ -291,6 +291,35 @@
    let indexEnd = indexStart + search.length
    let result  = string.substring(indexStart,indexEnd)
    console.log(result)</code></pre></li>
+</ul>
+</li>
+<li><ul>
+<li>字符串转驼峰</li>
+<li>例如：border-bottom-color -&gt; borderBottomColor</li>
+<li>题解：<pre><code>   function strToHump(val) {
+   let arr = val.split(&#39;-&#39;)
+   return arr.reduce(function (pre,current,index) {
+       return pre + current.charAt(0).toUpperCase() + current.slice(1)
+   })
+   }</code></pre></li>
+</ul>
+</li>
+<li><ul>
+<li>找出字符串中出行次数最多的字符和个数</li>
+<li>例如：abbcccddddd -&gt; 字符最多的是d，出现了5次</li>
+<li>题解：<pre><code>   let str = &#39;abbcccddddd&#39;
+   let obj = str.split(&#39;&#39;).reduce(function (pre,cur) {
+   pre[cur] ? pre[cur]++ : pre[cur] = 1
+   return pre
+   }, {})
+   let num = 0
+   let result = &#39;&#39;
+   for(key in obj) {
+   if (obj[key] &gt; num) {
+       num = obj[key]
+       result = key
+   }
+   }</code></pre></li>
 </ul>
 </li>
 </ol>
