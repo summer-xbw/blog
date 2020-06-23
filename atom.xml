@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-06-22T10:53:27.420Z</updated>
+  <updated>2020-06-23T13:40:54.734Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Vue-Router</title>
+    <link href="http://yoursite.com/2020/06/23/Vue-Router/"/>
+    <id>http://yoursite.com/2020/06/23/Vue-Router/</id>
+    <published>2020-06-23T00:13:37.000Z</published>
+    <updated>2020-06-23T13:40:54.734Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="什么是前端渲染？什么是后端渲染？"><a href="#什么是前端渲染？什么是后端渲染？" class="headerlink" title="什么是前端渲染？什么是后端渲染？"></a>什么是前端渲染？什么是后端渲染？</h2><h2 id="什么是前后端分离？"><a href="#什么是前后端分离？" class="headerlink" title="什么是前后端分离？"></a>什么是前后端分离？</h2><ul><li>有了Ajax的出现，才有了前后端分离的开发模式</li><li>后端只提供数据API，前端通过Ajax获取数据，并通过JavaScript将数据渲染到页面</li><li>优势：前后端责任清晰，前端专注于交互和可视化，后端专注于数据</li><li>移动端出现，后端的API不需要任何处理<h2 id="什么是前端路由？什么是后端路由"><a href="#什么是前端路由？什么是后端路由" class="headerlink" title="什么是前端路由？什么是后端路由"></a>什么是前端路由？什么是后端路由</h2><h2 id="单页面富应用（SPA）"><a href="#单页面富应用（SPA）" class="headerlink" title="单页面富应用（SPA）"></a>单页面富应用（SPA）</h2></li><li>在前后端分离的基础上加了一层前端路由</li><li>由前端来维护一套路由规则</li></ul><hr><h2 id="如何在改变URL的同时让页面不刷新"><a href="#如何在改变URL的同时让页面不刷新" class="headerlink" title="如何在改变URL的同时让页面不刷新"></a>如何在改变URL的同时让页面不刷新</h2>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;什么是前端渲染？什么是后端渲染？&quot;&gt;&lt;a href=&quot;#什么是前端渲染？什么是后端渲染？&quot; class=&quot;headerlink&quot; title=&quot;什么是前端渲染？什么是后端渲染？&quot;&gt;&lt;/a&gt;什么是前端渲染？什么是后端渲染？&lt;/h2&gt;&lt;h2 id=&quot;什么是前后端分离？
+      
+    
+    </summary>
+    
+    
+      <category term="-Vue" scheme="http://yoursite.com/categories/Vue/"/>
+    
+    
+      <category term="-Vue-Router -前端路由" scheme="http://yoursite.com/tags/Vue-Router-%E5%89%8D%E7%AB%AF%E8%B7%AF%E7%94%B1/"/>
+    
+  </entry>
   
   <entry>
     <title>Vue-CLI</title>
@@ -152,15 +178,16 @@
     <link href="http://yoursite.com/2020/06/08/es6/"/>
     <id>http://yoursite.com/2020/06/08/es6/</id>
     <published>2020-06-08T07:20:32.000Z</published>
-    <updated>2020-06-22T11:00:42.685Z</updated>
+    <updated>2020-06-23T00:10:45.486Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="箭头函数"><a href="#箭头函数" class="headerlink" title="箭头函数"></a>箭头函数</h2>]]></content>
+    <content type="html"><![CDATA[<h2 id="箭头函数中this的指向"><a href="#箭头函数中this的指向" class="headerlink" title="箭头函数中this的指向"></a>箭头函数中this的指向</h2><ul><li>this应用的是最近作用域中的this</li><li>箭头函数无this</li><li>一层层向外找</li></ul>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h2 id=&quot;箭头函数&quot;&gt;&lt;a href=&quot;#箭头函数&quot; class=&quot;headerlink&quot; title=&quot;箭头函数&quot;&gt;&lt;/a&gt;箭头函数&lt;/h2&gt;
+        &lt;h2 id=&quot;箭头函数中this的指向&quot;&gt;&lt;a href=&quot;#箭头函数中this的指向&quot; class=&quot;headerlink&quot; title=&quot;箭头函数中this的指向&quot;&gt;&lt;/a&gt;箭头函数中this的指向&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;this应用的是最近作用域中的this&lt;/li&gt;
       
     
     </summary>

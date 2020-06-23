@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2020/06/23/Vue-Router/</loc>
+    
+    <lastmod>2020-06-23T13:40:54.734Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2020/06/08/es6/</loc>
     
-    <lastmod>2020-06-22T11:00:42.685Z</lastmod>
+    <lastmod>2020-06-23T00:10:45.486Z</lastmod>
     
   </url>
   
