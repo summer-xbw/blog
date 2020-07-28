@@ -49,7 +49,7 @@
     
     <title>
         
-            JavaScript算法笔记 | Xbw的博客
+            JavaScript基础 | Xbw的博客
         
     </title>
     
@@ -208,19 +208,19 @@
     
     
       <div class="post-header"> 
-  <a class="post-header-title" href="/2020/06/04/algorithm-notes/">JavaScript算法笔记</a>
+  <a class="post-header-title" href="/2020/07/28/JavaScript-Review/">JavaScript基础</a>
   <div class="post-header-meta">
     <span>
       <span class="iconfont icon-calendar"></span>
-      Posted on:&nbsp;2020-06-04
+      Posted on:&nbsp;2020-07-28
     </span>
     <span>
       <span class="iconfont icon-calendar-check"></span>
-      Edited on:&nbsp;2020-06-19
+      Edited on:&nbsp;2020-07-28
     </span>
     <span>
       <span class="iconfont icon-folder"></span>
-      In:&nbsp;<a class="category-link" href="/categories/JavaScript/">-JavaScript</a>
+      In:&nbsp;<a class="category-link" href="/categories/JavaScript%E5%9B%9E%E9%A1%BE/">-JavaScript回顾</a>
     </span>
     
       <span>
@@ -242,25 +242,25 @@
       <button class="mdui-btn mdui-btn-icon mdui-text-color-teal" mdui-menu="{target: '#share_menu', align: 'right'}"><i class="iconfont icon-share"></i></button>
       <ul class="mdui-menu" id="share_menu">
         <li class="mdui-menu-item">
-          <a href="http://service.weibo.com/share/share.php?appkey=&title=JavaScript算法笔记&url=http://yoursite.com/2020/06/04/algorithm-notes/&pic=http://yoursite.com/null&searchPic=false&style=simple" target="_blank" class="mdui-ripple">Share to Weibo</a>
+          <a href="http://service.weibo.com/share/share.php?appkey=&title=JavaScript基础&url=http://yoursite.com/2020/07/28/JavaScript-Review/&pic=http://yoursite.com/null&searchPic=false&style=simple" target="_blank" class="mdui-ripple">Share to Weibo</a>
         </li>
         <li class="mdui-menu-item">
-          <a href="https://twitter.com/intent/tweet?text=JavaScript算法笔记&url=http://yoursite.com/2020/06/04/algorithm-notes/&via=Xbw" target="_blank" class="mdui-ripple">Share to Twitter</a>
+          <a href="https://twitter.com/intent/tweet?text=JavaScript基础&url=http://yoursite.com/2020/07/28/JavaScript-Review/&via=Xbw" target="_blank" class="mdui-ripple">Share to Twitter</a>
         </li>
         <li class="mdui-menu-item">
-          <a href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2020/06/04/algorithm-notes/" target="_blank" class="mdui-ripple">Share to Facebook</a>
+          <a href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2020/07/28/JavaScript-Review/" target="_blank" class="mdui-ripple">Share to Facebook</a>
         </li>
         <li class="mdui-menu-item">
-          <a href="https://plus.google.com/share?url=http://yoursite.com/2020/06/04/algorithm-notes/" target="_blank" class="mdui-ripple">Share to Google+</a>
+          <a href="https://plus.google.com/share?url=http://yoursite.com/2020/07/28/JavaScript-Review/" target="_blank" class="mdui-ripple">Share to Google+</a>
         </li>
         <li class="mdui-menu-item">
-          <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://yoursite.com/2020/06/04/algorithm-notes/&title=JavaScript算法笔记" target="_blank" class="mdui-ripple">Share to LinkedIn</a>
+          <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://yoursite.com/2020/07/28/JavaScript-Review/&title=JavaScript基础" target="_blank" class="mdui-ripple">Share to LinkedIn</a>
         </li>
         <li class="mdui-menu-item">
-          <a href="http://connect.qq.com/widget/shareqq/index.html?site=Xbw的博客&title=JavaScript算法笔记&summary=&pics=http://yoursite.com/null&url=http://yoursite.com/2020/06/04/algorithm-notes/" target="_blank" class="mdui-ripple">Share to QQ</a>
+          <a href="http://connect.qq.com/widget/shareqq/index.html?site=Xbw的博客&title=JavaScript基础&summary=&pics=http://yoursite.com/null&url=http://yoursite.com/2020/07/28/JavaScript-Review/" target="_blank" class="mdui-ripple">Share to QQ</a>
         </li>
         <li class="mdui-menu-item">
-          <a href="https://telegram.me/share/url?url=http://yoursite.com/2020/06/04/algorithm-notes/&text=JavaScript算法笔记" target="_blank" class="mdui-ripple">Share to Telegram</a>
+          <a href="https://telegram.me/share/url?url=http://yoursite.com/2020/07/28/JavaScript-Review/&text=JavaScript基础" target="_blank" class="mdui-ripple">Share to Telegram</a>
         </li>
       </ul>
     
@@ -273,56 +273,182 @@
   <div class="post-tags">
     
       <i class="iconfont icon-tag">
-        <a rel="tag" href = /tags/JavaScript%E7%AE%97%E6%B3%95/ >-JavaScript算法</a>
+        <a rel="tag" href = /tags/JavaScript%E5%9B%9E%E9%A1%BE/ >-JavaScript回顾</a>
       </i>
     
   </div>
 
   
   <div class="mdui-card-content mdui-typo mdui-p-x-4">
-    <h3 id="字符串相关"><a href="#字符串相关" class="headerlink" title="字符串相关"></a>字符串相关</h3><ol>
-<li><ul>
-<li>给出一个字符串”adadfdfseffqdjhuserfefsefseetsdg”</li>
-<li>要求：找出里边的字符串qdjhu</li>
-<li>题解：<pre><code>   let string = &#39;adadfdfseffqdjhuserfefsefseetsdg&#39;
-   let search = &#39;qdjhu&#39;
-   // 找到search在string中开始的位置
-   let indexStart = string.indexOf(search)
-   let indexEnd = indexStart + search.length
-   let result  = string.substring(indexStart,indexEnd)
-   console.log(result)</code></pre></li>
+    <h1 id="作用域（变量或者函数可以起作用的访问范围）"><a href="#作用域（变量或者函数可以起作用的访问范围）" class="headerlink" title="作用域（变量或者函数可以起作用的访问范围）"></a>作用域（变量或者函数可以起作用的访问范围）</h1><ul>
+<li>全局作用域：在<code>script</code>标签中或者一个独立的<code>js</code>文件中，全局变量在任何位置都可以访问<pre><code>var num = 1;  // 全局变量
+function fun() {
+  str = &#39;abc&#39;;  // 全局变量 不推荐 
+}</code></pre></li>
+<li>局部作用域：任何函数的内部都有一个局部作用域，在局部作用域中定义的变量为局部变量，只有在定义变量的函数中可以访问<pre><code>function fun() {
+  var num = 1;  // 局部变量 
+}
+console.log(num); // num is not defined</code></pre></li>
+<li>块级作用域：ES6之前没有块级作用域<pre><code>// 代码块
+{
+  var num = 1;
+}
+console.log(num);  // 1 可以访问到</code></pre></li>
+</ul>
+<hr>
+<h1 id="作用域链"><a href="#作用域链" class="headerlink" title="作用域链"></a>作用域链</h1><pre><code>var num = 1;  // 全局作用域 --0级作用域链
+function fun1() {
+  var num = 2;  // fun1局部作用域 --1级作用域链
+  function fun2() {
+    // fun2局部作用域 --2级作用域链
+    console.log(num)  
+  }
+  fun2()
+}
+fun1()  // 变量查找顺序 2级作用域链-&gt;1级作用域链-&gt;0级作用域链</code></pre><hr>
+<h1 id="预解析"><a href="#预解析" class="headerlink" title="预解析"></a>预解析</h1><ul>
+<li><p>在没有出现<code>let</code> <code>const</code>之前，会出现一些奇怪的问题</p>
+<pre><code>// 问题一
+console.log(num); // undefined
+var num = 1;
+
+// 问题二
+fun();   // hello
+function fun() {
+  console.log(&#39;hello&#39;)
+}</code></pre></li>
+<li><p>预解析过程（当预解析过程中函数和变量名字相同，函数优先）</p>
+<ul>
+<li><p>变量提升：把变量的声明提升到当前作用域的最上面，不包括变量的赋值</p>
+<pre><code>console.log(num); // undefined
+var num = 1;
+
+// 上述代码的预解析
+var num;
+console.log(num);
+num = 5;</code></pre></li>
+<li><p>函数提升：把函数的声明提升到当前作用域的最上面，不包括函数的调用</p>
+<pre><code>fun();   // hello
+function fun() {
+  console.log(&#39;hello&#39;)
+}
+
+// 上述代码的预解析
+function fun() {
+  console.log(&#39;hello&#39;)
+}
+ fun();
+
+// 注意
+function fn() {
+  var a = b = c = 9;
+  // 上述代码等价于下面的代码
+  var a = 9,  // 局部变量
+  b = 9,  // 全局变量
+  c = 9;  // 全局变量
+}</code></pre></li>
 </ul>
 </li>
-<li><ul>
-<li>字符串转驼峰</li>
-<li>例如：border-bottom-color -&gt; borderBottomColor</li>
-<li>题解：<pre><code>   function strToHump(val) {
-   let arr = val.split(&#39;-&#39;)
-   return arr.reduce(function (pre,current,index) {
-       return pre + current.charAt(0).toUpperCase() + current.slice(1)
-   })
-   }</code></pre></li>
+</ul>
+<hr>
+<h1 id="对象"><a href="#对象" class="headerlink" title="对象"></a>对象</h1><h2 id="对象的创建方式"><a href="#对象的创建方式" class="headerlink" title="对象的创建方式"></a>对象的创建方式</h2><ul>
+<li>对象字面量<pre><code>var person = {
+  name: &#39;Kobe&#39;,
+  age: &#39;40&#39;,
+  profession: &#39;篮球运动员&#39;,
+  sports: function() {
+    console.log(&#39;打篮球&#39;);
+  }
+}</code></pre></li>
+<li>通过<code>new Object()</code>创建<pre><code>// 调用构造函数在内存中创建一个空的对象 
+var person = new Object();
+// 添加成员和方法
+person.name = &#39;Kobe&#39;;
+person.age = 40;
+person.profession = &#39;篮球运动员&#39;;
+person.sports = function() {
+  console.log(&#39;打篮球&#39;);
+}</code></pre></li>
+<li>工厂方法<pre><code>function createPerson(name,age,profession) {
+  var person = new Object();
+  person.name = name;
+  person.age = age;
+  person.profession = profession;
+  person.sports = function() {
+    console.log(this.name + &#39;打篮球&#39;);
+  }
+  return person;
+}
+var person1 = createPerson(&#39;Kobe&#39;,40,&#39;篮球运动员&#39;);
+var person2 = createPerson(&#39;James&#39;,44,&#39;篮球运动员&#39;);</code></pre></li>
+<li>自定义构造函数<pre><code>// 帕斯卡命名 每个单词的第一个字母大写
+function Person(name,age,profession) {
+  // this执行当前对象
+  this.name = name;
+  this.age = age;
+  this.profession = profession;
+  this.sports = function() {
+    console.log(this.name + &#39;打篮球&#39;);
+  }
+}
+var person1 = new Person(&#39;Kobe&#39;,40,&#39;篮球运动员&#39;);
+var person2 = new Person(&#39;James&#39;,44,&#39;篮球运动员&#39;);</code></pre></li>
+</ul>
+<hr>
+<h2 id="new关键字的执行过程"><a href="#new关键字的执行过程" class="headerlink" title="new关键字的执行过程"></a><code>new</code>关键字的执行过程</h2><ul>
+<li>在内存中创建一个空的对象</li>
+<li>让函数中的<code>this</code>指向刚刚创建的对象</li>
+<li>执行构造函数，在构造函数中设置属性和方法</li>
+<li>返回了当前对象（内部处理）</li>
+</ul>
+<hr>
+<h2 id="this指向"><a href="#this指向" class="headerlink" title="this指向"></a><code>this</code>指向</h2><ul>
+<li>函数中的<code>this</code>指向<code>window</code><pre><code>function fun() {
+  console.log(this); // window
+}</code></pre></li>
+<li>方法中的<code>this</code>指向当前方法所属的对象<pre><code>var obj = {
+  name: &#39;Kobe&#39;,
+  fn: function() {
+    console.log(this); // Object--&gt;obj
+  }
+}</code></pre></li>
+<li>构造函数中的<code>this</code>指向构造函数创建的对象<pre><code>function Fun() {
+  this.name = &#39;Kobe&#39;;
+  console.log(this); 
+}</code></pre></li>
+</ul>
+<hr>
+<h2 id="遍历和删除对象的属性"><a href="#遍历和删除对象的属性" class="headerlink" title="遍历和删除对象的属性"></a>遍历和删除对象的属性</h2><pre><code>  var obj = {
+    name: &#39;Kobe&#39;,
+    age: 40,
+    sayHi: function() {
+      console.log(&#39;hello&#39;);
+    }
+  }
+  // 遍历 for in --&gt; key 为属性
+  for (var key in obj) {
+    console.log(key + &#39;=&gt;&#39; + obj[key])
+  }
+  // 删除属性
+  delete obj.name;
+  delete obj.sayHi;</code></pre><hr>
+<h2 id="内置对象"><a href="#内置对象" class="headerlink" title="内置对象"></a>内置对象</h2><ul>
+<li><code>Math</code>对象<ul>
+<li><code>Math.PI</code> 圆周率</li>
+<li><code>Math.random()</code> 生成随机数</li>
+<li><code>Math.floor()/Math.ceil()</code> 向下取整/向上取整</li>
+<li><code>Math.round()</code> 取整，四舍五入</li>
+<li><code>Math.abs()</code> 绝对值</li>
+<li><code>Math.max()/Math.min()</code> 最大值/最小值</li>
+<li><code>Math.sin()/Math.cos()</code> 正弦/余弦</li>
+<li><code>Math.power()/Math.sqrt()</code> 指数幂/平凡根</li>
 </ul>
 </li>
-<li><ul>
-<li>找出字符串中出行次数最多的字符和个数</li>
-<li>例如：abbcccddddd -&gt; 字符最多的是d，出现了5次</li>
-<li>题解：<pre><code>   let str = &#39;abbcccddddd&#39;
-   let obj = str.split(&#39;&#39;).reduce(function (pre,cur) {
-   pre[cur] ? pre[cur]++ : pre[cur] = 1
-   return pre
-   }, {})
-   let num = 0
-   let result = &#39;&#39;
-   for(key in obj) {
-   if (obj[key] &gt; num) {
-       num = obj[key]
-       result = key
-   }
-   }</code></pre></li>
+<li><code>Array</code>对象<ul>
+<li></li>
 </ul>
 </li>
-</ol>
+</ul>
 
   </div>
   <!--文末结束语-->
@@ -335,14 +461,9 @@
   
   <nav>
     
-      <a rel="prev" class="post-nav-item mdui-float-left" href="/2020/06/05/vue/">
-        <i class="iconfont icon-angle-left"></i>
-        <span>Vue基础</span>
-      </a>
     
-    
-      <a rel="next" class="post-nav-item mdui-float-right" href="/2020/06/04/JavaScript/">
-        <span>JavaScript高级程序设计（第三版）</span>
+      <a rel="next" class="post-nav-item mdui-float-right" href="/2020/06/23/Vue-Router/">
+        <span>Vue-Router</span>
         <i class="iconfont icon-angle-right"></i>
       </a>
     
@@ -356,8 +477,8 @@
     <button class="mdui-fab mdui-ripple mdui-color-teal" mdui-menu="{target: '#toc'}"><i class="iconfont icon-list"></i></button>
     <ul class="mdui-menu" id="toc">
       <li class="mdui-menu-item">
-        <a href="/2020/06/04/algorithm-notes/" id="toc-header" class="mdui-ripple">Table of Contents</a>
-        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#字符串相关"><span class="toc-number">1.</span> <span class="toc-text">字符串相关</span></a></li></ol>
+        <a href="/2020/07/28/JavaScript-Review/" id="toc-header" class="mdui-ripple">Table of Contents</a>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#作用域（变量或者函数可以起作用的访问范围）"><span class="toc-number">1.</span> <span class="toc-text">作用域（变量或者函数可以起作用的访问范围）</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#作用域链"><span class="toc-number">2.</span> <span class="toc-text">作用域链</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#预解析"><span class="toc-number">3.</span> <span class="toc-text">预解析</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#对象"><span class="toc-number">4.</span> <span class="toc-text">对象</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#对象的创建方式"><span class="toc-number">4.1.</span> <span class="toc-text">对象的创建方式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#new关键字的执行过程"><span class="toc-number">4.2.</span> <span class="toc-text">new关键字的执行过程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#this指向"><span class="toc-number">4.3.</span> <span class="toc-text">this指向</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#遍历和删除对象的属性"><span class="toc-number">4.4.</span> <span class="toc-text">遍历和删除对象的属性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#内置对象"><span class="toc-number">4.5.</span> <span class="toc-text">内置对象</span></a></li></ol></li></ol>
       </li>
     </ul>
   </div>
