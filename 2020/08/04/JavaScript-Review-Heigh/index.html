@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    
+    <meta name="renderer" content="webkit"/>
+    <meta name="force-rendering" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <script>if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode)) window.location.href="https://support.dmeng.net/upgrade-your-browser.html?referrer="+encodeURIComponent(window.location.href); </script>
+    
+    
+        <link rel="preload" crossorigin="crossorigin" href="/fonts/roboto/Roboto-Regular.woff2" as="font">
+        <link rel="preload" crossorigin="crossorigin" href="/fonts/roboto/Roboto-Bold.woff2" as="font">
+    
+    
+    
+        <link rel="shortcut icon" href="/icons/favicon.ico">
+    
+    
+    
+<link rel="stylesheet" href="/css/mdui.min.css">
+<link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="/css/iconfont.css">
+
+    
+    
+
+    
+        <script data-ad-client="ca-" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+          
+
+
+    
+    
+    <title>
+        
+            JavaScript高级回顾 | Xbw的博客
+        
+    </title>
+    
+    
+<meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="Xbw的博客" type="application/atom+xml">
+</head>
+<body class="mdui-drawer-body-left mdui-appbar-with-toolbar mdui-theme-primary-teal mdui-theme-accent-blue">
+  
+  <header class="mdui-appbar mdui-appbar-fixed">
+  <div id="toolbar" class="mdui-toolbar mdui-color-theme">
+    <button class="mdui-btn mdui-btn-icon" mdui-drawer="{target: '#sidebar', swipe: true}"><i class="iconfont icon-menu"></i></button>
+    <a href="/" class="mdui-typo-headline">Xbw的博客</a>
+    <a href="/" class="header-subtitle mdui-typo-headline"></a>
+    <div class="mdui-toolbar-spacer"></div>
+    <button class="mdui-btn mdui-btn-icon" mdui-dialog="{target: '#search'}" mdui-tooltip="{content: 'search'}"><i class="iconfont icon-search"></i></button>
+  </div>
+</header>
+
+<div class="mdui-dialog" id="search">
+  
+    <div class="search-form">
+      <input type="search" class="search-form-input" placeholder="请输入关键字" onfocus="listenSearchFunc()">
+    </div>
+    <div class="search-result" data-resource="/search.xml"></div>
+  
+</div>
+
+  <aside id="sidebar" class="mdui-drawer">
+    <div class="mdui-tab" mdui-tab>
+        <a href="#sidebar-tab1" id="sidebartab" class="mdui-ripple mdui-tab-active">Overview</a>
+        <a href="#sidebar-tab2" id="sidebartab" class="mdui-ripple">About</a>
+    </div>
+
+    
+    <div id="sidebar-tab1" class="mdui-p-a-2">
+        <div class="mdui-list">
+            
+                
+                <a href="/" class="mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-icon">
+                        <i class="iconfont icon-home"></i>
+                    </div>
+                    <div class="mdui-list-item-content">主页</div>
+                </a>
+            
+                
+                <a href="/tags/" class="mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-icon">
+                        <i class="iconfont icon-bookmark"></i>
+                    </div>
+                    <div class="mdui-list-item-content">标签</div>
+                </a>
+            
+                
+                <a href="/categories/" class="mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-icon">
+                        <i class="iconfont icon-folder"></i>
+                    </div>
+                    <div class="mdui-list-item-content">分类</div>
+                </a>
+            
+                
+                <a href="/archives/" class="mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-icon">
+                        <i class="iconfont icon-archive"></i>
+                    </div>
+                    <div class="mdui-list-item-content">归档</div>
+                </a>
+            
+            <div class="mdui-list-item mdui-ripple">
+                <div class="mdui-list-item-icon">
+                    <i class="iconfont icon-moon"></i>
+                </div>
+                <div class="mdui-list-item-content">Night Mode</div>
+                <label class="mdui-switch" id="darkmode">
+                  <input type="checkbox" id="nightmode_switch"/>
+                  <i class="mdui-switch-icon"></i>
+                </label>
+            </div>           
+        </div>
+    </div>
+
+    
+    <div id="sidebar-tab2" class="mdui-p-a-2">
+        <div class="sidebar-overview">
+            <div class="sidebar-avatar">
+                
+                    <img src="/icons/avatar.gif"/>
+                
+            </div>
+            <div class="sidebar-author-name">Xbw</div>
+            <div class="sidebar-description"></div>
+        </div>
+        <div class="sidebar-links">
+            
+                
+                <div class="mdui-chip">
+                    <span class="mdui-chip-icon"><i class="iconfont icon-mail"></i></span>
+                    <a href="mailto:zw15964740247@gmail.com" class="mdui-chip-title">E-Mail</a>
+                </div>
+            
+                
+                <div class="mdui-chip">
+                    <span class="mdui-chip-icon"><i class="iconfont icon-github"></i></span>
+                    <a href="https://github.com/xiabenwei" target="_blank" rel="noopener" class="mdui-chip-title">GitHub</a>
+                </div>
+            
+                
+                <div class="mdui-chip">
+                    <span class="mdui-chip-icon"><i class="iconfont icon-wechat"></i></span>
+                    <a href="https://your.url" target="_blank" rel="noopener" class="mdui-chip-title">WeChat</a>
+                </div>
+            
+                
+                <div class="mdui-chip">
+                    <span class="mdui-chip-icon"><i class="iconfont icon-weibo"></i></span>
+                    <a href="https://your.url" target="_blank" rel="noopener" class="mdui-chip-title">Weibo</a>
+                </div>
+            
+        </div>
+        <ul class="mdui-list" mdui-collapse="{accordion: true}">
+            <li class="mdui-collapse-item">
+                <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-icon">
+                        <i class="iconfont icon-link"></i>
+                    </div>
+                    <div class="mdui-list-item-content">Links</div>
+                    <div class="mdui-collapse-item-arrow">
+                        <i class="mdui-list-item-icon iconfont icon-angle-down"></i>
+                    </div>
+                </div>
+                <ul class="mdui-collapse-item-body mdui-list mdui-list-dense">
+                    
+                        <a href="https://xiabenwei.work/" target="_blank" rel="noopener" class="mdui-list-item mdui-ripple">
+                            我的博客
+                        </a>
+                    
+                        <a href="https://hzblog.top/" target="_blank" rel="noopener" class="mdui-list-item mdui-ripple">
+                            Hz
+                        </a>
+                    
+                </ul>
+            </li>
+        </ul>
+
+    </div>
+
+    <div class="mdui-divider"></div>
+    
+    
+</aside>
+  
+  <main id="main-contain" class="mdui-container mdui-m-t-5">
+    <article id="article" class="mdui-card mdui-p-b-2 mdui-m-b-5">
+  <header class="mdui-card-media">
+    
+    
+      <div class="post-header"> 
+  <a class="post-header-title" href="/2020/08/04/JavaScript-Review-Heigh/">JavaScript高级回顾</a>
+  <div class="post-header-meta">
+    <span>
+      <span class="iconfont icon-calendar"></span>
+      Posted on:&nbsp;2020-08-04
+    </span>
+    <span>
+      <span class="iconfont icon-calendar-check"></span>
+      Edited on:&nbsp;2020-08-14
+    </span>
+    <span>
+      <span class="iconfont icon-folder"></span>
+      In:&nbsp;<a class="category-link" href="/categories/JavaScript%E5%9B%9E%E9%A1%BE/">-JavaScript回顾</a>
+    </span>
+    
+      <span>
+        <span class="iconfont icon-eye"></span>
+        Views:&nbsp;
+        <span id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv"></span></span>
+      </span>
+    
+  </div>
+</div>   
+    
+
+
+
+    
+    
+    <div class="mdui-card-menu">
+    
+      <button class="mdui-btn mdui-btn-icon mdui-text-color-teal" mdui-menu="{target: '#share_menu', align: 'right'}"><i class="iconfont icon-share"></i></button>
+      <ul class="mdui-menu" id="share_menu">
+        <li class="mdui-menu-item">
+          <a href="http://service.weibo.com/share/share.php?appkey=&title=JavaScript高级回顾&url=http://yoursite.com/2020/08/04/JavaScript-Review-Heigh/&pic=http://yoursite.com/null&searchPic=false&style=simple" target="_blank" class="mdui-ripple">Share to Weibo</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="https://twitter.com/intent/tweet?text=JavaScript高级回顾&url=http://yoursite.com/2020/08/04/JavaScript-Review-Heigh/&via=Xbw" target="_blank" class="mdui-ripple">Share to Twitter</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2020/08/04/JavaScript-Review-Heigh/" target="_blank" class="mdui-ripple">Share to Facebook</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="https://plus.google.com/share?url=http://yoursite.com/2020/08/04/JavaScript-Review-Heigh/" target="_blank" class="mdui-ripple">Share to Google+</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://yoursite.com/2020/08/04/JavaScript-Review-Heigh/&title=JavaScript高级回顾" target="_blank" class="mdui-ripple">Share to LinkedIn</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="http://connect.qq.com/widget/shareqq/index.html?site=Xbw的博客&title=JavaScript高级回顾&summary=&pics=http://yoursite.com/null&url=http://yoursite.com/2020/08/04/JavaScript-Review-Heigh/" target="_blank" class="mdui-ripple">Share to QQ</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="https://telegram.me/share/url?url=http://yoursite.com/2020/08/04/JavaScript-Review-Heigh/&text=JavaScript高级回顾" target="_blank" class="mdui-ripple">Share to Telegram</a>
+        </li>
+      </ul>
+    
+  </div>
+  </header>
+  
+  
+  
+  
+  <div class="post-tags">
+    
+      <i class="iconfont icon-tag">
+        <a rel="tag" href = /tags/JavaScript%E5%9B%9E%E9%A1%BE/ >-JavaScript回顾</a>
+      </i>
+    
+  </div>
+
+  
+  <div class="mdui-card-content mdui-typo mdui-p-x-4">
+    <h1 id="面向对象"><a href="#面向对象" class="headerlink" title="面向对象"></a>面向对象</h1><h2 id="构造函数的原型（通过原型创建的方法，所有构造函数的实例对象都可以访问）"><a href="#构造函数的原型（通过原型创建的方法，所有构造函数的实例对象都可以访问）" class="headerlink" title="构造函数的原型（通过原型创建的方法，所有构造函数的实例对象都可以访问）"></a>构造函数的原型（通过原型创建的方法，所有构造函数的实例对象都可以访问）</h2><pre><code>function Person(name, age) {
+    this.name = name;
+    this.age = age;
+}
+Person.prototype.getName = function() {
+    return this.name;
+}
+var person = new Person(&#39;Kobe&#39;, 40);
+console.log(person.getName()) // Kobe</code></pre><h2 id="对象的原型"><a href="#对象的原型" class="headerlink" title="对象的原型"></a>对象的原型</h2><pre><code>function Person(name, age) {
+    this.name = name;
+    this.age = age;
+    this.getName = function() {
+        return this.name;
+    }
+}
+var person = new Person(&#39;Kobe&#39;, 40);
+console.log(person.__proto__ === Person.prototype); // true</code></pre><ul>
+<li>当调用对象的属性或方法时，先去找对象本身的属性或方法，如果对象没有该属性或方法，此时则调用原型中的属性或方法</li>
+<li>当设置对象的属性时，不会查询原型链，如果对象没有该属性，直接添加该属性</li>
+</ul>
+<hr>
+<h2 id="自调用函数（解决命名冲突，连续写多个自调用函数时要加分号）"><a href="#自调用函数（解决命名冲突，连续写多个自调用函数时要加分号）" class="headerlink" title="自调用函数（解决命名冲突，连续写多个自调用函数时要加分号）"></a>自调用函数（解决命名冲突，连续写多个自调用函数时要加分号）</h2><pre><code>;(function() {
+    // 局部作用域 外部访问不到
+    var src = &#39;abc&#39;;
+    window.src = src; // 外部能访问到
+})()</code></pre><ul>
+<li>自调用函数的参数<pre><code>;(function(w, u) {
+    // 传入window让变量名可以被压缩
+    // 老版浏览器传入undefined防止值被改变
+})(window, undefined)</code></pre></li>
+</ul>
+<hr>
+<h2 id="改变this指向"><a href="#改变this指向" class="headerlink" title="改变this指向"></a>改变this指向</h2><ul>
+<li><code>bind</code><pre><code>var src = &#39;Kobe&#39;;
+function fun1() {
+    console.log(this.src)
+}
+fun1(); // Kobe
+var o = {src: &#39;James&#39;}
+var fun2 = fun1.bind(o); // bind第一个参数改变this指向
+fun2(); // James</code></pre></li>
+</ul>
+<hr>
+<h1 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h1><h2 id="对象之间的拷贝"><a href="#对象之间的拷贝" class="headerlink" title="对象之间的拷贝"></a>对象之间的拷贝</h2><pre><code>function extend(parent, child) {
+    for (var key in parent) {
+        if (child[key]) {
+            continue;
+        }
+        child[key] = parent[key];
+    }
+}</code></pre><hr>
+<h2 id="原型继承"><a href="#原型继承" class="headerlink" title="原型继承"></a>原型继承</h2><pre><code>function Person() {
+    this.age = 40;
+}
+function Student() {
+    this.name = &#39;Kobe&#39;
+}
+Student.prototype = new Person();
+Student.prototype.constructor = Student;</code></pre><hr>
+<h2 id="bind-call-apply"><a href="#bind-call-apply" class="headerlink" title="bind call apply"></a><code>bind</code> <code>call</code> <code>apply</code></h2><ul>
+<li><code>bind</code>改变<code>this</code>的指向，复制一个新的函数（不调用函数）<pre><code>function sum(x, y) {
+    console.log(this);
+    return x + y;
+}
+sum(1,3); // this-&gt;window 相当于window.sum(1,3);
+var obj = {name: &#39;Kobe&#39;};
+var fun = sum.bind(obj, 1, 3);
+fun(); // this-&gt;obj
+// 应用
+var o = {
+    name: &#39;James&#39;,
+    fn: function() {
+        setInterval(function() {
+            console.log(this.name); // 没调用bind前this指向window,调用bind后指向o
+        }.bind(this), 1000)
+    }
+}</code></pre></li>
+<li><code>call</code>改变<code>this</code>的指向，直接调用函数，返回值就是函数的返回值<pre><code>function sum(x, y) {
+    console.log(this);
+    return x + y;
+}
+var obj = {name: &#39;Kobe&#39;};
+sum.call(obj, 1, 3); // this-&gt;obj</code></pre></li>
+<li><code>apply</code>改变<code>this</code>的指向，直接调用函数，返回值就是函数的返回值，第二个参数是一个数组，把数组的每一项展开传给函数<pre><code>var arr = [2, 4, 6, 8, 0, 1];
+console.log(Math.max(arr)); // NaN
+// 应用
+console.log(Math.max.apply(Math, arr)); // 8
+console.log.apply(console, arr); // 2 4 6 8 0 1</code></pre></li>
+</ul>
+<hr>
+<h2 id="借用构造函数实现继承"><a href="#借用构造函数实现继承" class="headerlink" title="借用构造函数实现继承"></a>借用构造函数实现继承</h2><pre><code>function Person(name, age) {
+    this.name = name;
+    this.age = age;
+}
+function Student(name,age,score) {
+    Person.call(this, name, age); // 借用构造函数以及call
+    this.score = score;
+}</code></pre><hr>
+<h2 id="组合继承（原型继承-组合继承）"><a href="#组合继承（原型继承-组合继承）" class="headerlink" title="组合继承（原型继承+组合继承）"></a>组合继承（原型继承+组合继承）</h2><pre><code>function Person(name, age) {
+    this.name = name;
+    this.age = age;
+}
+Person.prototype.sayHi = function () {
+    console.log(&#39;hello&#39; + this.name);
+}
+function Student(name, age, score) {
+    Person.call(this, name, age); // 借用构造函数
+    this.score = score;
+}
+Student.prototype = new Person(); // 让子类型继承父类型的方法 这一步可以给子类型添加独有的方法而不会影响父类型
+Student.prototype.constructor = Student;</code></pre><hr>
+<h1 id="函数进阶"><a href="#函数进阶" class="headerlink" title="函数进阶"></a>函数进阶</h1><h2 id="函数的定义方式"><a href="#函数的定义方式" class="headerlink" title="函数的定义方式"></a>函数的定义方式</h2><ul>
+<li><p>函数声明</p>
+<pre><code>function fun() {
+    console.log(&#39;hello&#39;);
+}</code></pre></li>
+<li><p>函数表达式</p>
+<pre><code>var fun = function() {
+    console.log(&#39;hello&#39;);
+}</code></pre></li>
+<li><p><code>new Function()</code> 代码解析较慢</p>
+<pre><code>var fun = new Function(&#39;a&#39;,&#39;b&#39;,console.log(a + b)&#39;)</code></pre></li>
+<li><p>函数声明和表达式的区别</p>
+<pre><code>fun1();   // fun1
+function fun1() {
+    console.log(&#39;fun1&#39;);
+}
+fun2(); // 报错
+var fun2 = function() {
+    console.log(&#39;fun2&#39;);
+}
+
+// 以上分析（预解析过程）
+function fun1() {
+    console.log(&#39;fun1&#39;);
+}
+var fun2;
+fun1(); // fun1
+fun2(); // 此时不是函数
+fun2 = function() {
+    console.log(&#39;fun2&#39;);
+}</code></pre></li>
+</ul>
+<hr>
+<h2 id="函数调用方式以及内部this指向"><a href="#函数调用方式以及内部this指向" class="headerlink" title="函数调用方式以及内部this指向"></a>函数调用方式以及内部<code>this</code>指向</h2><ul>
+<li>普通函数调用<pre><code>function fun() {
+    console.log(this); // window
+}
+fun();</code></pre></li>
+<li>作为方法调用<pre><code>var obj = {
+    fun: function() {
+        console.log(this); // obj
+    }
+}
+obj.fun();</code></pre></li>
+<li>作为构造函数调用 内部<code>this</code>指向由该构造函数创建的对象</li>
+<li>作为事件的处理函数 <code>this</code>指向事件源</li>
+<li>作为定时器的参数<pre><code>setTimeout(function() {
+    console.log(this); // window
+}, 1000)</code></pre></li>
+</ul>
+<hr>
+<h1 id="闭包"><a href="#闭包" class="headerlink" title="闭包"></a>闭包</h1><ul>
+<li>概念：闭包是使用被作用域封闭的变量，函数，闭包等执行的一个函数的作用域，通常用和其相应的函数来指代这些作用域（可以独立访问数据的函数），个人理解就是一个作用域中访问到另一个作用域中的变量或函数的一种现象</li>
+<li>闭包的好处：延展了作用域的范围</li>
+</ul>
+<hr>
+<h1 id="拷贝"><a href="#拷贝" class="headerlink" title="拷贝"></a>拷贝</h1><h2 id="浅拷贝"><a href="#浅拷贝" class="headerlink" title="浅拷贝"></a>浅拷贝</h2><pre><code>var obj1 = {
+    name: &#39;Kobe&#39;,
+    age: 40,
+    friend: {
+        name: &#39;James&#39;,
+        age: 44
+    }
+}
+var obj2 = {}
+for (var key in obj1) {
+    obj2[key] = obj1[key];  // 复杂类型复制的地址
+}
+// 浅拷贝 修改ojb1中的name、age不会影响obj2，但修改obj1中friend中的name、age会影响obj2中friend</code></pre><hr>
+<h2 id="深拷贝"><a href="#深拷贝" class="headerlink" title="深拷贝"></a>深拷贝</h2><pre><code>var obj1 = {
+    name: &#39;Kobe&#39;,
+    age: 40,
+    friend: {
+      name: &#39;James&#39;,
+      age: 44
+    },
+    hobbies: [&#39;看电影&#39;, &#39;打篮球&#39;]
+};
+// obj1拷贝给obj2
+function deepCopy(obj1, obj2) {
+    for (var key in obj1) {
+      var item = obj1[key];
+      if (item instanceof Array) {
+        obj2[key] = [];
+        deepCopy(item, obj2[key])
+      } else if (item instanceof Object) {
+        obj2[key] = {};
+        deepCopy(item, obj2[key])
+      } else {
+        obj2[key] = item;
+      }
+    }
+}
+var obj2 = {}
+deepCopy(obj1, obj2);
+obj1.friend.name = &#39;YaoMing&#39;;
+console.log(obj2.friend.name); // James</code></pre><hr>
+<h1 id="正则表达式（匹配规律规则的表达式）"><a href="#正则表达式（匹配规律规则的表达式）" class="headerlink" title="正则表达式（匹配规律规则的表达式）"></a>正则表达式（匹配规律规则的表达式）</h1><h2 id="内置对象RegExp"><a href="#内置对象RegExp" class="headerlink" title="内置对象RegExp"></a>内置对象<code>RegExp</code></h2><pre><code>var regularExpression = new RegExp(&#39;ab[a-z]&#39;, &#39;i&#39;);
+var str = &#39;aBc&#39;;
+console.log(regularExpression.test(str)); // true</code></pre><ul>
+<li>第一个参数 模式pattern</li>
+<li>第二个参数 flag i-&gt;忽略大小写 g-&gt;全局匹配</li>
+</ul>
+<hr>
+<h2 id="简单写法"><a href="#简单写法" class="headerlink" title="简单写法"></a>简单写法</h2><pre><code>var regularExpression = /ab[a-z]/i;
+var str = &#39;aBc&#39;;
+console.log(regularExpression.test(str)); // true</code></pre><hr>
+<h2 id="正则方法"><a href="#正则方法" class="headerlink" title="正则方法"></a>正则方法</h2><ul>
+<li><p><code>RegExp</code>对象的方法</p>
+<ul>
+<li><code>test()</code><pre><code>var regExp = /ab[a-z]/i;
+var str = &#39;aBc&#39;;
+console.log(regExp.test(str)); // true</code></pre></li>
+<li><code>exec()</code>无论调用多少次只返回一个匹配到的结果，返回所有结果就需要全局匹配并多次调用<pre><code>var str = &#39;Kobe:44,James: 40&#39;;
+var regExp = /\d+/g;
+do {
+    var result = regExp.exec(str); // 数组
+    if (result != null) {
+        console.log(result[0])
+    }
+} while(result != null)</code></pre></li>
+</ul>
+</li>
+<li><p><code>String</code>对象的方法</p>
+<ul>
+<li><p><code>split()</code></p>
+</li>
+<li><p><code>match()</code></p>
+<pre><code>var str = &#39;Kobe:44,James: 40&#39;;
+var regExp = /\d+/g; // 需要全局匹配
+console.log(str.match(regExp)); // 数组
+
+// 分组提取
+var str = &#39;2013-4-3&#39;;
+var regExp = /(\d{4})-(\d{1,2})-(\d{1,2})/; // 分组提取
+ str.match(regExp);
+console.log(RegExp.$1); // 2013
+console.log(RegExp.$2); // 4
+console.log(RegExp.$3); // 3</code></pre></li>
+<li><p><code>replace()</code></p>
+<pre><code>var str = &#39; aaa   dd dfsafa  d  &#39;;
+// 去掉空格
+str.replace(/\s/g, &#39;&#39;);</code></pre></li>
+<li><p><code>search()</code></p>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <!--文末结束语-->
+  
+    <div style="text-align:center;color: #ccc;font-size:24px;"> --- 已经到底啦 <i class="iconfont icon-heartbeat" style="font-size:24px;"></i> The End --- </div>
+  
+  <!--页脚广告-->
+  
+  <div class="mdui-divider"></div>
+  
+  <nav>
+    
+      <a rel="prev" class="post-nav-item mdui-float-left" href="/2020/08/15/Ajax/">
+        <i class="iconfont icon-angle-left"></i>
+        <span>Ajax</span>
+      </a>
+    
+    
+      <a rel="next" class="post-nav-item mdui-float-right" href="/2020/07/31/JavaScript-Review-DOM-BOM/">
+        <span>DOM和BOM</span>
+        <i class="iconfont icon-angle-right"></i>
+      </a>
+    
+  </nav>
+</article>
+
+
+
+
+  <div class="toc-button"  style="z-index: 100;">
+    <button class="mdui-fab mdui-ripple mdui-color-teal" mdui-menu="{target: '#toc'}"><i class="iconfont icon-list"></i></button>
+    <ul class="mdui-menu" id="toc">
+      <li class="mdui-menu-item">
+        <a href="/2020/08/04/JavaScript-Review-Heigh/" id="toc-header" class="mdui-ripple">Table of Contents</a>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#面向对象"><span class="toc-number">1.</span> <span class="toc-text">面向对象</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#构造函数的原型（通过原型创建的方法，所有构造函数的实例对象都可以访问）"><span class="toc-number">1.1.</span> <span class="toc-text">构造函数的原型（通过原型创建的方法，所有构造函数的实例对象都可以访问）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#对象的原型"><span class="toc-number">1.2.</span> <span class="toc-text">对象的原型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#自调用函数（解决命名冲突，连续写多个自调用函数时要加分号）"><span class="toc-number">1.3.</span> <span class="toc-text">自调用函数（解决命名冲突，连续写多个自调用函数时要加分号）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#改变this指向"><span class="toc-number">1.4.</span> <span class="toc-text">改变this指向</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#继承"><span class="toc-number">2.</span> <span class="toc-text">继承</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#对象之间的拷贝"><span class="toc-number">2.1.</span> <span class="toc-text">对象之间的拷贝</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#原型继承"><span class="toc-number">2.2.</span> <span class="toc-text">原型继承</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#bind-call-apply"><span class="toc-number">2.3.</span> <span class="toc-text">bind call apply</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#借用构造函数实现继承"><span class="toc-number">2.4.</span> <span class="toc-text">借用构造函数实现继承</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#组合继承（原型继承-组合继承）"><span class="toc-number">2.5.</span> <span class="toc-text">组合继承（原型继承+组合继承）</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#函数进阶"><span class="toc-number">3.</span> <span class="toc-text">函数进阶</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#函数的定义方式"><span class="toc-number">3.1.</span> <span class="toc-text">函数的定义方式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#函数调用方式以及内部this指向"><span class="toc-number">3.2.</span> <span class="toc-text">函数调用方式以及内部this指向</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#闭包"><span class="toc-number">4.</span> <span class="toc-text">闭包</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#拷贝"><span class="toc-number">5.</span> <span class="toc-text">拷贝</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#浅拷贝"><span class="toc-number">5.1.</span> <span class="toc-text">浅拷贝</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#深拷贝"><span class="toc-number">5.2.</span> <span class="toc-text">深拷贝</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#正则表达式（匹配规律规则的表达式）"><span class="toc-number">6.</span> <span class="toc-text">正则表达式（匹配规律规则的表达式）</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#内置对象RegExp"><span class="toc-number">6.1.</span> <span class="toc-text">内置对象RegExp</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#简单写法"><span class="toc-number">6.2.</span> <span class="toc-text">简单写法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#正则方法"><span class="toc-number">6.3.</span> <span class="toc-text">正则方法</span></a></li></ol></li></ol>
+      </li>
+    </ul>
+  </div>
+
+
+
+    <div id="comment" class="mdui-card mdui-p-a-2 mdui-m-b-5">
+      <div class="mdui-tab" mdui-tab>
+        
+          <a href="#comment-tab0" class="mdui-ripple">gitalk</a>
+        
+          <a href="#comment-tab1" class="mdui-ripple">livere</a>
+        
+      </div>
+      
+        <div id="comment-tab0" class="mdui-p-a-2">
+          <div id="gitalk-container"></div>
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/js-md5@0.7.3/src/md5.min.js"></script>
+<script>
+  var gitalk = new Gitalk({
+    clientID: '',
+    clientSecret: '',
+    repo: '',
+    owner: '',
+    admin: [''],
+    id:  md5(location.pathname) ,
+    distractionFreeMode: 'true',
+  });
+  gitalk.render('gitalk-container');
+</script>
+        </div>
+      
+        <div id="comment-tab1" class="mdui-p-a-2">
+          <div id="lv-container" data-id="city" data-uid="">
+  <script type="text/javascript">
+    (function (d, s) {
+      var j, e = d.getElementsByTagName(s)[0];
+      if (typeof LivereTower === 'function') { return; }
+      j = d.createElement(s);
+      j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+      j.async = true;
+      e.parentNode.insertBefore(j, e);
+    })(document, 'script');
+  </script>
+  <noscript>Please enable JavaScript to view the comments powered by LiveRe.</noscript>
+</div>
+        </div>
+      
+    </div>
+
+  </main>
+  <footer id="footer" class="mdui-text-center mdui-m-t-5 mdui-p-b-2 mdui-p-t-4 mdui-color-theme">
+  <div class="mdui-container">
+    <div class="mdui-row">
+      
+        <a href="http://www.beian.miit.gov.cn" rel="noopener" target="_blank"></a>
+      
+      <span>
+        &copy; 2019 - 2020 
+        
+          <span style="color:#d9333f" class="iconfont icon-heart"></span>
+        
+        Xbw
+      </span>
+    </div>
+    <div class="mdui-row">
+      
+        <span>Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a></span>
+      
+    </div>
+    <div class="mdui-row">
+      
+        <div class="mdui-col-xs-6 mdui-text-right">
+          <span id="busuanzi_container_site_uv" style="display: none;"> <span class="iconfont icon-user"></span>Total Visitors <span id="busuanzi_value_site_uv"></span></span>
+        </div>
+        <div class="mdui-col-xs-6 mdui-text-left">
+          <span id="busuanzi_container_site_pv" style="display: none;"> <span class="iconfont icon-eye"></span>Total Views <span id="busuanzi_value_site_pv"></span></span>
+        </div>
+      
+    </div>
+ </div>
+</footer>
+  
+  <button id="gotop" class="mdui-fab mdui-fab-fixed mdui-fab-hide mdui-ripple mdui-color-teal" style="z-index:100;"><i class="iconfont icon-arrowup"></i></button>
+  
+  
+
+    <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@8.4.8/dist/mermaid.min.js"></script>
+    <script>mermaid.initialize({
+        startOnLoad: true,
+        theme: "default"
+    });</script>
+
+
+
+
+<script src="/js/mdui.min.js"></script>
+<script src="/js/meadow.js"></script>
+
+</body>
+</html >

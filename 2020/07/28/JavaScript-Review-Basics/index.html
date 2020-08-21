@@ -216,7 +216,7 @@
     </span>
     <span>
       <span class="iconfont icon-calendar-check"></span>
-      Edited on:&nbsp;2020-08-01
+      Edited on:&nbsp;2020-08-07
     </span>
     <span>
       <span class="iconfont icon-folder"></span>
@@ -327,7 +327,7 @@ var num = 1;
 var num;
 console.log(num);
 num = 5;</code></pre></li>
-<li><p>函数提升：把函数的声明提升到当前作用域的最上面，不包括函数的调用</p>
+<li><p>函数提升：把函数的声明提升到当前作用域的最上面，不包括函数的调用，现代浏览器中，<code>if</code>语句中的函数不会提升，在老的IE中会提升</p>
 <pre><code>fun();   // hello
 function fun() {
   console.log(&#39;hello&#39;)

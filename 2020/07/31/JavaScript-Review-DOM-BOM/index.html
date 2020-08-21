@@ -216,7 +216,7 @@
     </span>
     <span>
       <span class="iconfont icon-calendar-check"></span>
-      Edited on:&nbsp;2020-08-02
+      Edited on:&nbsp;2020-08-03
     </span>
     <span>
       <span class="iconfont icon-folder"></span>
@@ -392,10 +392,93 @@ e.cancelBabble = true;</code></pre></li>
 <li><code>element.innerHTML</code></li>
 <li><code>document.createElement()</code> 创建一个元素对象</li>
 <li><code>box.appendChild()</code> 在box中追加子元素</li>
-<li><code>inserBefor()</code> 把元素插入到指定位置</li>
+<li><code>insertBefore()</code> 把元素插入到指定位置</li>
 <li><code>replaceChild()</code> 把当前元素的标签进行替换</li>
 </ul>
 <hr>
+<h1 id="offset-client-scroll三大家"><a href="#offset-client-scroll三大家" class="headerlink" title="offset client scroll三大家"></a><code>offset</code> <code>client</code> <code>scroll</code>三大家</h1><ul>
+<li><code>offset</code> 偏移量<ul>
+<li><code>box.offsetParent</code> 获取距离box最近的定位父元素 无定位，则父元素是body</li>
+<li><code>box.offsetLeft</code> 获取box横坐标 是距离<code>offsetParent</code>的横向偏移距离</li>
+<li><code>box.offsetTop</code> 获取box纵坐标 是距离<code>offsetParent</code>的纵向偏移距离</li>
+<li><code>box.offsetWidth</code> 获取box宽度 包括边距和边框</li>
+<li><code>box.offsetHeight</code> 获取box高度 包括边距和padding</li>
+</ul>
+</li>
+<li><code>client</code> <ul>
+<li><code>box.clientLeft</code> 不是元素坐标 对应border-left的宽度</li>
+<li><code>box.clientTop</code> 不是元素坐标 对应border-top的宽度</li>
+<li><code>box.clientWidth</code> 包括padding 不包括边框</li>
+<li><code>box.clientHeight</code> 包括padding 不包括边框</li>
+</ul>
+</li>
+<li><code>scroll</code><ul>
+<li><code>box.scrollLeft</code> 滚动条滚动出去的距离</li>
+<li><code>box.scrollTop</code> 滚动条滚动出去的距离</li>
+<li><code>box.scrollWidth</code> 内容的大小 包括padding和未显示的内容</li>
+<li><code>box.scrollHeight</code> 内容的大小 包括padding和未显示的内容</li>
+<li><code>box.onscroll</code> 拖动滚动条时触发该事件</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h1 id="BOM"><a href="#BOM" class="headerlink" title="BOM"></a>BOM</h1><h2 id="常用对话框（基本不会使用）"><a href="#常用对话框（基本不会使用）" class="headerlink" title="常用对话框（基本不会使用）"></a>常用对话框（基本不会使用）</h2><ul>
+<li><code>alert(&#39;弹出内容&#39;)</code></li>
+<li><code>prompt(&#39;提示内容&#39;,&#39;默认值&#39;)</code> 返回值为输入的值</li>
+<li><code>confirm(&#39;提示内容&#39;)</code> 返回值为布尔值</li>
+</ul>
+<hr>
+<h2 id="页面加载事件"><a href="#页面加载事件" class="headerlink" title="页面加载事件"></a>页面加载事件</h2><ul>
+<li><code>window.onload</code> 页面加载完成后执行</li>
+<li><code>window.onunload</code> 页面卸载时执行（所有对话框不能使用）</li>
+</ul>
+<hr>
+<h2 id="定时器"><a href="#定时器" class="headerlink" title="定时器"></a>定时器</h2><ul>
+<li><code>setTimeout()</code> 隔一段时间执行，并且只会执行一次<pre><code>var timeId;
+btn1.addEventListener(&#39;click&#39;, function () {
+  // 开启定时器
+  timeId = setTimeout(function () {
+  }, 1000);
+})
+btn2.addEventListener(&#39;click&#39;, function() {
+  // 取消定时器
+  clearTimeout(timeId);
+})</code></pre></li>
+<li><code>setInterval()</code> 隔一段时间执行，并且会重复执行<pre><code>var timeId;
+btn1.addEventListener(&#39;click&#39;, function () {
+  // 开启定时器
+  timeId = setInterval(function () {
+  }, 1000);
+})
+btn2.addEventListener(&#39;click&#39;, function() {
+  // 取消定时器
+  clearInterval(timeId);
+})</code></pre></li>
+</ul>
+<hr>
+<h2 id="location对象"><a href="#location对象" class="headerlink" title="location对象"></a><code>location</code>对象</h2><ul>
+<li><code>location.href</code> 让页面跳转到指定位置 记录历史</li>
+<li><code>location.assign()</code> 委派 让页面跳转到指定位置 记录历史</li>
+<li><code>location.replace()</code> 替换 不记录历史</li>
+<li><code>location.reload()</code> 重新加载页面 参数为true会强制从服务器获取页面 参数为false，浏览器有缓存，直接从缓存获取页面</li>
+<li><code>window.history</code> <pre><code>history.back() // 后退
+history.forward() // 前进
+history.go(1) // 前进
+history.go(-1) // 后退</code></pre></li>
+<li>URL 统一资源定位符（scheme://host:port/path?query#fragment）<ul>
+<li>scheme 通信协议 常用：http ftp mailto</li>
+<li>host 主机 服务器域名系统主机名或IP地址</li>
+<li>port 端口号 省略使用默认端口</li>
+<li>path 路径</li>
+<li>query 查询</li>
+<li>fragment 信息片段 字符串，锚点</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="navigator对象"><a href="#navigator对象" class="headerlink" title="navigator对象"></a>navigator对象</h2><ul>
+<li><code>navigator.userAgent</code> 当前使用的浏览器、操作系统信息</li>
+</ul>
 
   </div>
   <!--文末结束语-->
@@ -407,6 +490,11 @@ e.cancelBabble = true;</code></pre></li>
   <div class="mdui-divider"></div>
   
   <nav>
+    
+      <a rel="prev" class="post-nav-item mdui-float-left" href="/2020/08/04/JavaScript-Review-Heigh/">
+        <i class="iconfont icon-angle-left"></i>
+        <span>JavaScript高级回顾</span>
+      </a>
     
     
       <a rel="next" class="post-nav-item mdui-float-right" href="/2020/07/28/JavaScript-Review-Basics/">
@@ -425,7 +513,7 @@ e.cancelBabble = true;</code></pre></li>
     <ul class="mdui-menu" id="toc">
       <li class="mdui-menu-item">
         <a href="/2020/07/31/JavaScript-Review-DOM-BOM/" id="toc-header" class="mdui-ripple">Table of Contents</a>
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#获取页面元素"><span class="toc-number">1.</span> <span class="toc-text">获取页面元素</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#事件"><span class="toc-number">2.</span> <span class="toc-text">事件</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#注册事件"><span class="toc-number">2.1.</span> <span class="toc-text">注册事件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#移除事件"><span class="toc-number">2.2.</span> <span class="toc-text">移除事件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#事件的三个阶段"><span class="toc-number">2.3.</span> <span class="toc-text">事件的三个阶段</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#事件委托（原理为事件冒泡）"><span class="toc-number">2.4.</span> <span class="toc-text">事件委托（原理为事件冒泡）</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#阻止默认行为执行和事件冒泡"><span class="toc-number">3.</span> <span class="toc-text">阻止默认行为执行和事件冒泡</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#阻止默认行为"><span class="toc-number">3.1.</span> <span class="toc-text">阻止默认行为</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#阻止事件冒泡"><span class="toc-number">3.2.</span> <span class="toc-text">阻止事件冒泡</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#innerHTML-innerText-和-textContent"><span class="toc-number">4.</span> <span class="toc-text">innerHTML  innerText 和 textContent</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#节点"><span class="toc-number">5.</span> <span class="toc-text">节点</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#动态创建元素"><span class="toc-number">6.</span> <span class="toc-text">动态创建元素</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#获取页面元素"><span class="toc-number">1.</span> <span class="toc-text">获取页面元素</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#事件"><span class="toc-number">2.</span> <span class="toc-text">事件</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#注册事件"><span class="toc-number">2.1.</span> <span class="toc-text">注册事件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#移除事件"><span class="toc-number">2.2.</span> <span class="toc-text">移除事件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#事件的三个阶段"><span class="toc-number">2.3.</span> <span class="toc-text">事件的三个阶段</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#事件委托（原理为事件冒泡）"><span class="toc-number">2.4.</span> <span class="toc-text">事件委托（原理为事件冒泡）</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#阻止默认行为执行和事件冒泡"><span class="toc-number">3.</span> <span class="toc-text">阻止默认行为执行和事件冒泡</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#阻止默认行为"><span class="toc-number">3.1.</span> <span class="toc-text">阻止默认行为</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#阻止事件冒泡"><span class="toc-number">3.2.</span> <span class="toc-text">阻止事件冒泡</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#innerHTML-innerText-和-textContent"><span class="toc-number">4.</span> <span class="toc-text">innerHTML  innerText 和 textContent</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#节点"><span class="toc-number">5.</span> <span class="toc-text">节点</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#动态创建元素"><span class="toc-number">6.</span> <span class="toc-text">动态创建元素</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#offset-client-scroll三大家"><span class="toc-number">7.</span> <span class="toc-text">offset client scroll三大家</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#BOM"><span class="toc-number">8.</span> <span class="toc-text">BOM</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#常用对话框（基本不会使用）"><span class="toc-number">8.1.</span> <span class="toc-text">常用对话框（基本不会使用）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#页面加载事件"><span class="toc-number">8.2.</span> <span class="toc-text">页面加载事件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#定时器"><span class="toc-number">8.3.</span> <span class="toc-text">定时器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#location对象"><span class="toc-number">8.4.</span> <span class="toc-text">location对象</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#navigator对象"><span class="toc-number">8.5.</span> <span class="toc-text">navigator对象</span></a></li></ol></li></ol>
       </li>
     </ul>
   </div>

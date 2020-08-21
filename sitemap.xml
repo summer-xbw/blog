@@ -2,16 +2,51 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://yoursite.com/2020/07/31/JavaScript-Review-DOM-BOM/</loc>
+    <loc>http://yoursite.com/2020/08/21/cross-domain/</loc>
     
-    <lastmod>2020-08-02T10:12:45.220Z</lastmod>
+    <lastmod>2020-08-21T09:49:06.181Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2020/08/15/Ajax/</loc>
+    
+    <lastmod>2020-08-21T03:56:52.802Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2020/08/17/jQuery/</loc>
+    
+    <lastmod>2020-08-19T09:04:05.500Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2020/08/04/JavaScript-Review-Heigh/</loc>
+    
+    <lastmod>2020-08-14T02:26:38.316Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://yoursite.com/2020/07/28/JavaScript-Review-Basics/</loc>
     
-    <lastmod>2020-08-01T00:42:17.017Z</lastmod>
+    <lastmod>2020-08-07T03:41:44.461Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2020/06/12/vue-module/</loc>
+    
+    <lastmod>2020-08-03T08:53:50.055Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2020/07/31/JavaScript-Review-DOM-BOM/</loc>
+    
+    <lastmod>2020-08-03T02:28:34.207Z</lastmod>
     
   </url>
   
@@ -68,13 +103,6 @@
     <loc>http://yoursite.com/2020/06/16/html-css-interview/</loc>
     
     <lastmod>2020-06-16T13:56:23.067Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2020/06/12/vue-module/</loc>
-    
-    <lastmod>2020-06-15T14:16:39.616Z</lastmod>
     
   </url>
   

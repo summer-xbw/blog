@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    
+    <meta name="renderer" content="webkit"/>
+    <meta name="force-rendering" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <script>if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode)) window.location.href="https://support.dmeng.net/upgrade-your-browser.html?referrer="+encodeURIComponent(window.location.href); </script>
+    
+    
+        <link rel="preload" crossorigin="crossorigin" href="/fonts/roboto/Roboto-Regular.woff2" as="font">
+        <link rel="preload" crossorigin="crossorigin" href="/fonts/roboto/Roboto-Bold.woff2" as="font">
+    
+    
+    
+        <link rel="shortcut icon" href="/icons/favicon.ico">
+    
+    
+    
+<link rel="stylesheet" href="/css/mdui.min.css">
+<link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="/css/iconfont.css">
+
+    
+    
+
+    
+        <script data-ad-client="ca-" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+          
+
+
+    
+    
+    <title>
+        
+            jQuery回顾 | Xbw的博客
+        
+    </title>
+    
+    
+<meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="Xbw的博客" type="application/atom+xml">
+</head>
+<body class="mdui-drawer-body-left mdui-appbar-with-toolbar mdui-theme-primary-teal mdui-theme-accent-blue">
+  
+  <header class="mdui-appbar mdui-appbar-fixed">
+  <div id="toolbar" class="mdui-toolbar mdui-color-theme">
+    <button class="mdui-btn mdui-btn-icon" mdui-drawer="{target: '#sidebar', swipe: true}"><i class="iconfont icon-menu"></i></button>
+    <a href="/" class="mdui-typo-headline">Xbw的博客</a>
+    <a href="/" class="header-subtitle mdui-typo-headline"></a>
+    <div class="mdui-toolbar-spacer"></div>
+    <button class="mdui-btn mdui-btn-icon" mdui-dialog="{target: '#search'}" mdui-tooltip="{content: 'search'}"><i class="iconfont icon-search"></i></button>
+  </div>
+</header>
+
+<div class="mdui-dialog" id="search">
+  
+    <div class="search-form">
+      <input type="search" class="search-form-input" placeholder="请输入关键字" onfocus="listenSearchFunc()">
+    </div>
+    <div class="search-result" data-resource="/search.xml"></div>
+  
+</div>
+
+  <aside id="sidebar" class="mdui-drawer">
+    <div class="mdui-tab" mdui-tab>
+        <a href="#sidebar-tab1" id="sidebartab" class="mdui-ripple mdui-tab-active">Overview</a>
+        <a href="#sidebar-tab2" id="sidebartab" class="mdui-ripple">About</a>
+    </div>
+
+    
+    <div id="sidebar-tab1" class="mdui-p-a-2">
+        <div class="mdui-list">
+            
+                
+                <a href="/" class="mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-icon">
+                        <i class="iconfont icon-home"></i>
+                    </div>
+                    <div class="mdui-list-item-content">主页</div>
+                </a>
+            
+                
+                <a href="/tags/" class="mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-icon">
+                        <i class="iconfont icon-bookmark"></i>
+                    </div>
+                    <div class="mdui-list-item-content">标签</div>
+                </a>
+            
+                
+                <a href="/categories/" class="mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-icon">
+                        <i class="iconfont icon-folder"></i>
+                    </div>
+                    <div class="mdui-list-item-content">分类</div>
+                </a>
+            
+                
+                <a href="/archives/" class="mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-icon">
+                        <i class="iconfont icon-archive"></i>
+                    </div>
+                    <div class="mdui-list-item-content">归档</div>
+                </a>
+            
+            <div class="mdui-list-item mdui-ripple">
+                <div class="mdui-list-item-icon">
+                    <i class="iconfont icon-moon"></i>
+                </div>
+                <div class="mdui-list-item-content">Night Mode</div>
+                <label class="mdui-switch" id="darkmode">
+                  <input type="checkbox" id="nightmode_switch"/>
+                  <i class="mdui-switch-icon"></i>
+                </label>
+            </div>           
+        </div>
+    </div>
+
+    
+    <div id="sidebar-tab2" class="mdui-p-a-2">
+        <div class="sidebar-overview">
+            <div class="sidebar-avatar">
+                
+                    <img src="/icons/avatar.gif"/>
+                
+            </div>
+            <div class="sidebar-author-name">Xbw</div>
+            <div class="sidebar-description"></div>
+        </div>
+        <div class="sidebar-links">
+            
+                
+                <div class="mdui-chip">
+                    <span class="mdui-chip-icon"><i class="iconfont icon-mail"></i></span>
+                    <a href="mailto:zw15964740247@gmail.com" class="mdui-chip-title">E-Mail</a>
+                </div>
+            
+                
+                <div class="mdui-chip">
+                    <span class="mdui-chip-icon"><i class="iconfont icon-github"></i></span>
+                    <a href="https://github.com/xiabenwei" target="_blank" rel="noopener" class="mdui-chip-title">GitHub</a>
+                </div>
+            
+                
+                <div class="mdui-chip">
+                    <span class="mdui-chip-icon"><i class="iconfont icon-wechat"></i></span>
+                    <a href="https://your.url" target="_blank" rel="noopener" class="mdui-chip-title">WeChat</a>
+                </div>
+            
+                
+                <div class="mdui-chip">
+                    <span class="mdui-chip-icon"><i class="iconfont icon-weibo"></i></span>
+                    <a href="https://your.url" target="_blank" rel="noopener" class="mdui-chip-title">Weibo</a>
+                </div>
+            
+        </div>
+        <ul class="mdui-list" mdui-collapse="{accordion: true}">
+            <li class="mdui-collapse-item">
+                <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-icon">
+                        <i class="iconfont icon-link"></i>
+                    </div>
+                    <div class="mdui-list-item-content">Links</div>
+                    <div class="mdui-collapse-item-arrow">
+                        <i class="mdui-list-item-icon iconfont icon-angle-down"></i>
+                    </div>
+                </div>
+                <ul class="mdui-collapse-item-body mdui-list mdui-list-dense">
+                    
+                        <a href="https://xiabenwei.work/" target="_blank" rel="noopener" class="mdui-list-item mdui-ripple">
+                            我的博客
+                        </a>
+                    
+                        <a href="https://hzblog.top/" target="_blank" rel="noopener" class="mdui-list-item mdui-ripple">
+                            Hz
+                        </a>
+                    
+                </ul>
+            </li>
+        </ul>
+
+    </div>
+
+    <div class="mdui-divider"></div>
+    
+    
+</aside>
+  
+  <main id="main-contain" class="mdui-container mdui-m-t-5">
+    <article id="article" class="mdui-card mdui-p-b-2 mdui-m-b-5">
+  <header class="mdui-card-media">
+    
+    
+      <div class="post-header"> 
+  <a class="post-header-title" href="/2020/08/17/jQuery/">jQuery回顾</a>
+  <div class="post-header-meta">
+    <span>
+      <span class="iconfont icon-calendar"></span>
+      Posted on:&nbsp;2020-08-17
+    </span>
+    <span>
+      <span class="iconfont icon-calendar-check"></span>
+      Edited on:&nbsp;2020-08-19
+    </span>
+    <span>
+      <span class="iconfont icon-folder"></span>
+      In:&nbsp;<a class="category-link" href="/categories/jQuery/">-jQuery</a>
+    </span>
+    
+      <span>
+        <span class="iconfont icon-eye"></span>
+        Views:&nbsp;
+        <span id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv"></span></span>
+      </span>
+    
+  </div>
+</div>   
+    
+
+
+
+    
+    
+    <div class="mdui-card-menu">
+    
+      <button class="mdui-btn mdui-btn-icon mdui-text-color-teal" mdui-menu="{target: '#share_menu', align: 'right'}"><i class="iconfont icon-share"></i></button>
+      <ul class="mdui-menu" id="share_menu">
+        <li class="mdui-menu-item">
+          <a href="http://service.weibo.com/share/share.php?appkey=&title=jQuery回顾&url=http://yoursite.com/2020/08/17/jQuery/&pic=http://yoursite.com/null&searchPic=false&style=simple" target="_blank" class="mdui-ripple">Share to Weibo</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="https://twitter.com/intent/tweet?text=jQuery回顾&url=http://yoursite.com/2020/08/17/jQuery/&via=Xbw" target="_blank" class="mdui-ripple">Share to Twitter</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2020/08/17/jQuery/" target="_blank" class="mdui-ripple">Share to Facebook</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="https://plus.google.com/share?url=http://yoursite.com/2020/08/17/jQuery/" target="_blank" class="mdui-ripple">Share to Google+</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://yoursite.com/2020/08/17/jQuery/&title=jQuery回顾" target="_blank" class="mdui-ripple">Share to LinkedIn</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="http://connect.qq.com/widget/shareqq/index.html?site=Xbw的博客&title=jQuery回顾&summary=&pics=http://yoursite.com/null&url=http://yoursite.com/2020/08/17/jQuery/" target="_blank" class="mdui-ripple">Share to QQ</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="https://telegram.me/share/url?url=http://yoursite.com/2020/08/17/jQuery/&text=jQuery回顾" target="_blank" class="mdui-ripple">Share to Telegram</a>
+        </li>
+      </ul>
+    
+  </div>
+  </header>
+  
+  
+  
+  
+  <div class="post-tags">
+    
+      <i class="iconfont icon-tag">
+        <a rel="tag" href = /tags/jQuery%E5%9B%9E%E9%A1%BE/ >-jQuery回顾</a>
+      </i>
+    
+  </div>
+
+  
+  <div class="mdui-card-content mdui-typo mdui-p-x-4">
+    <h2 id="关于jQuery"><a href="#关于jQuery" class="headerlink" title="关于jQuery"></a>关于jQuery</h2><ul>
+<li>是什么：本质上就是一个<code>JavaScript</code>函数库</li>
+<li>使用jQuery的原因<ul>
+<li>DOM实现一个简单的功能需要很多的代码</li>
+<li>DOM中兼容性问题很多</li>
+<li>DOM中代码的容错性很差</li>
+<li>DOM中的<code>window.onload</code>只能有一个</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="jQuery中的顶级对象"><a href="#jQuery中的顶级对象" class="headerlink" title="jQuery中的顶级对象$"></a>jQuery中的顶级对象<code>$</code></h2><ul>
+<li>DOM中的顶级对象为<code>document</code> 页面中的顶级对象</li>
+<li>BOM中的顶级对象为<code>window</code> 浏览器中的顶级对象</li>
+<li>jQuery中的顶级对象为<code>jQuery</code>或者为<code>$</code></li>
+</ul>
+<hr>
+<h2 id="页面的加载事件"><a href="#页面的加载事件" class="headerlink" title="页面的加载事件"></a>页面的加载事件</h2><ul>
+<li>DOM中的加载事件（只能执行最后一个）<pre><code>window.onload = function() {
+  console.log(&#39;DOM1&#39;);
+}
+window.onload = function() {
+  console.log(&#39;DOM2&#39;);
+}
+// 最后的结果为DOM2</code></pre></li>
+<li>jQuery中的加载事件<ul>
+<li>写法一（页面所有的内容加载完毕后触发，包括标签、图片、文字内容）<pre><code>$(window).load = function() {
+  console.log(&#39;jQuery1&#39;);
+}
+$(window).load = function() {
+  console.log(&#39;jQuery2&#39;);
+}
+// 执行结果为 jQuery1 jQuery2</code></pre></li>
+<li>写法二（页面中基本的标签加载完毕后触发，比写法一速度快一些）<pre><code>$(document).ready = function() {
+  console.log(&#39;jQuery1&#39;);
+}
+$(document).ready = function() {
+  console.log(&#39;jQuery2&#39;);
+}
+// 执行结果为 jQuery1 jQuery2</code></pre></li>
+<li>写法三（页面中基本的标签加载完毕后触发，比写法一速度快一些）<pre><code>$(function() {
+  console.log(&#39;jQuery1&#39;);
+})
+$(function() {
+  console.log(&#39;jQuery2&#39;);
+})
+// 执行结果为 jQuery1 jQuery2</code></pre></li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="jQuery和DOM对象的相互转换"><a href="#jQuery和DOM对象的相互转换" class="headerlink" title="jQuery和DOM对象的相互转换"></a>jQuery和DOM对象的相互转换</h2><ul>
+<li>DOM对象转jQuery对象<pre><code>var btn = document.getElementById(&#39;btn&#39;); // DOM对象
+$(btn).click(function() {}); // jQuery对象</code></pre></li>
+<li>jQuery对象转DOM对象<pre><code>var btn = $(&#39;#btn&#39;); // jQuery对象
+btn.get(0); // DOM对象
+btn[0]; // DOM对象</code></pre></li>
+</ul>
+<hr>
+<h2 id="jQuery选择器"><a href="#jQuery选择器" class="headerlink" title="jQuery选择器"></a>jQuery选择器</h2><ul>
+<li>根据id来选择–&gt;<code>$(&#39;#id的值&#39;)</code> 一个</li>
+<li>根据标签名获取–&gt;<code>$(&#39;标签的名字&#39;)</code> 多个</li>
+<li>根据类样式的名字–&gt;<code>$(&#39;.类样式的名字&#39;)</code> 多个</li>
+<li>层次选择器–&gt;<code>$(&#39;ul&gt;li&#39;)</code></li>
+<li>索引选择器<pre><code>$(&#39;ul&gt;li:eq(4)&#39;); // 获取索引为4的li元素
+$(&#39;ul&gt;li:gt(4)&#39;); // 获取索引大于4的li元素
+$(&#39;ul&gt;li:lt(4)&#39;); // 获取索引小于4的li元素</code></pre></li>
+<li>关于获取兄弟元素<pre><code>// 获取当前元素的下一个兄弟元素
+$(&#39;#box&#39;).next(); 
+// 获取当前元素的后面的所有兄弟元素
+$(&#39;#box&#39;).nextAll();
+// 获取当前元素的前一个兄弟元素
+$(&#39;#box&#39;).prev();
+// 获取当前元素的前面的所有的兄弟元素
+$(&#39;#box&#39;).prevAll();
+// 获取当前元素的所有的兄弟元素
+$(&#39;#box&#39;).siblings();</code></pre></li>
+</ul>
+<hr>
+<h2 id="jQuery样式操作"><a href="#jQuery样式操作" class="headerlink" title="jQuery样式操作"></a>jQuery样式操作</h2><ul>
+<li><p>添加和移除类样式</p>
+<pre><code>// 添加
+$(&#39;#btn&#39;).click(function() {
+  // 添加cls和cls2类样式 
+  // $(&#39;#box&#39;).addClass(&#39;cls&#39;).addClass(&#39;cls2&#39;);
+  $(&#39;#box&#39;).addClass(&#39;cls cls2&#39;);
+})
+// 移除
+$(&#39;#btn&#39;).click(function() {
+  // 移除cls
+  // $(&#39;#box&#39;).removeClass(&#39;cls&#39;)
+  // 移除所有类样式
+  $(&#39;#box&#39;).removeClass();
+})</code></pre></li>
+<li><p>判断是否应用了类样式</p>
+<pre><code>var result = $(&#39;#box&#39;).hasClass(&#39;cls&#39;); // true或false</code></pre></li>
+<li><p>切换元素的类样式方法<code>toggleClass()</code></p>
+</li>
+<li><p>设置和获取坐标</p>
+<pre><code>$(&#39;#box&#39;).offset({
+  &quot;top&quot;: 200,
+  &quot;left&quot;: 200
+})
+
+$(&#39;#box&#39;).offset().left;
+$(&#39;#box&#39;).offset().top;</code></pre></li>
+<li><p>滚动出去的距离</p>
+<pre><code>$(document).scrollLeft(); // 数字类型
+$(document).scrollTop(); // 数字类型</code></pre></li>
+</ul>
+<hr>
+<h2 id="链式编程"><a href="#链式编程" class="headerlink" title="链式编程"></a>链式编程</h2><pre><code>$(&#39;#box&#39;).html(&#39;&lt;p&gt;p标签&lt;/p&gt;&#39;).css(&quot;backgroundColor&quot;,&quot;red&quot;);
+
+$(&#39;#btn&#39;).click(function() {
+
+}).mouseover(function() {
+
+})</code></pre><hr>
+<h2 id="jQuery中的动画"><a href="#jQuery中的动画" class="headerlink" title="jQuery中的动画"></a>jQuery中的动画</h2><ul>
+<li>显示和隐藏<ul>
+<li>数字参数：1000表示1000毫秒</li>
+<li>字符串参数：slow normal fast<pre><code>$(&#39;#btn1&#39;).click(function() {
+// $(&#39;#box&#39;).hide(1000)；
+$(&#39;#box&#39;).hide(&#39;slow&#39;);
+})
+$(&#39;#btn2&#39;).click(function() {
+// $(&#39;#box&#39;).show(1000);
+$(&#39;#box&#39;).show(&#39;normal&#39;);
+})</code></pre></li>
+</ul>
+</li>
+<li>滑入、滑出和切换<ul>
+<li>数字参数：1000表示1000毫秒</li>
+<li>字符串参数：slow normal fast<pre><code>$(&#39;#btn1&#39;).click(function() {
+$(&#39;#box&#39;).slideUp();
+})
+$(&#39;#btn2&#39;).click(function() {
+$(&#39;#box&#39;).slideDown();
+})
+$(&#39;#btn3&#39;).click(function() {
+$(&#39;#box&#39;).slideToggle();
+})</code></pre></li>
+</ul>
+</li>
+<li>淡入、淡出和切换<ul>
+<li>数字参数：1000表示1000毫秒</li>
+<li>字符串参数：slow normal fast<pre><code>$(&#39;#btn1&#39;).click(function() {
+$(&#39;#box&#39;).fadeIn();
+})
+$(&#39;#btn2&#39;).click(function() {
+$(&#39;#box&#39;).fadeOut();
+})
+$(&#39;#btn3&#39;).click(function() {
+$(&#39;#box&#39;).fadeToggle();
+})</code></pre></li>
+</ul>
+</li>
+<li>透明度变化<ul>
+<li>参数一：时间</li>
+<li>参数二：透明度<pre><code>$(&#39;#btn&#39;).click(function() {
+$(&#39;#box&#39;).fadeTo(1000, 0.3);
+})</code></pre></li>
+</ul>
+</li>
+<li><code>animate</code>方法<ul>
+<li>参数一：对象</li>
+<li>参数二：时间</li>
+<li>参数三：匿名函数<pre><code>$(&#39;#btn&#39;).click(function() {
+$(&#39;#box&#39;).animate({
+  &quot;width&quot;: &quot;300px&quot;,
+  &quot;height&quot;: &quot;300px&quot;
+}, 1000, function() {
+  $(&#39;#box&#39;).animate({
+    &quot;width&quot;: &quot;100px&quot;,
+    &quot;height&quot;: &quot;100px&quot;
+  }, 1000)
+})
+})</code></pre></li>
+</ul>
+</li>
+<li><code>stop()</code>停止动画的方法</li>
+</ul>
+<hr>
+<h2 id="jQuery动态创建元素"><a href="#jQuery动态创建元素" class="headerlink" title="jQuery动态创建元素"></a>jQuery动态创建元素</h2><ul>
+<li><p><code>$(&#39;标签的代码&#39;)</code></p>
+<pre><code>var a = $(&#39;&lt;a href=&quot;http://www.baidu.com&quot;&gt;百度&lt;/a&gt;&#39;);
+$(&#39;#box&#39;).append(a); // 追加到某个元素后面
+$(&#39;#box&#39;).prepend(a); // 追加到某个元素前面
+$(&#39;#box&#39;).after(a); // 把元素追加到当前元素的后面（兄弟元素）
+$(&#39;#box&#39;).before(a); // 把元素追加到当前元素的前面（兄弟元素）
+a.appendTo($(&#39;#box&#39;)); // 追加到box中</code></pre></li>
+<li><p><code>对象.html(&#39;标签的代码&#39;)</code></p>
+<pre><code>$(&#39;#box&#39;).html(&#39;&lt;p&gt;p标签&lt;/p&gt;&#39;);</code></pre></li>
+<li><p>移除和克隆内容</p>
+<pre><code>$(&#39;#box&#39;).html(); // 移除box中的元素
+$(&#39;#box&#39;).empty(); // 移除box中的元素
+$(&#39;#box&#39;).remove(); // 移除元素自身
+
+var box = $(&#39;#box&#39;).clone(); // 克隆box元素</code></pre></li>
+</ul>
+<hr>
+<h2 id="自定义属性"><a href="#自定义属性" class="headerlink" title="自定义属性"></a>自定义属性</h2><ul>
+<li><p>获取属性的值<br><code>$(&#39;#box&#39;).attr(&#39;title&#39;);</code>href</p>
+</li>
+<li><p>设置属性的值</p>
+<pre><code>$(&#39;#box&#39;).attr(&#39;name&#39;,&#39;http://www.baidu.com&#39;);
+
+$(&#39;#div :checkbox&#39;).prop(&#39;checked&#39;, true);</code></pre></li>
+</ul>
+<hr>
+<h2 id="事件绑定和解绑"><a href="#事件绑定和解绑" class="headerlink" title="事件绑定和解绑"></a>事件绑定和解绑</h2><ul>
+<li><code>bind() unbind()</code> 不推荐<pre><code>// 绑定单个事件
+$(&#39;#btn&#39;).bind(&#39;click&#39;, function() {
+})
+// 解绑
+$(&#39;#btn&#39;).unbind(&#39;click&#39;);
+// 绑定多个事件
+$(&#39;#btn&#39;).click().mouseover().mouseout();
+$(&#39;#btn&#39;).bind({
+  &quot;click&quot;: function() {}
+}, {
+  &quot;mouseover&quot;: function() {}
+},{
+  &quot;mouseout&quot;: function() {} 
+})</code></pre></li>
+<li><code>delegate() undelegate()</code> 不推荐<pre><code>// 为box中的p标签绑定点击事件
+$(&#39;#box&#39;).delegate(&#39;p&#39;,&#39;click&#39;,function() {
+})
+// 解绑
+$(&#39;#box&#39;).undelegate(&#39;p&#39;,&#39;click&#39;);</code></pre></li>
+<li><code>on() off()</code><pre><code>// 给按钮绑定点击事件
+$(&#39;#btn&#39;).on(&#39;click&#39;, function() {
+})
+// 解绑
+$(&#39;#btn&#39;).off(&#39;click&#39;);
+// 给box中的p标签绑定点击事件
+$(&#39;#box&#39;).on(&#39;click&#39;,&#39;p&#39;,function() {
+})</code></pre></li>
+</ul>
+<hr>
+<h2 id="触发事件"><a href="#触发事件" class="headerlink" title="触发事件"></a>触发事件</h2><ul>
+<li>方式一<pre><code>$(&#39;#btn&#39;).click()</code></pre></li>
+<li>方式二<pre><code>$(&#39;#btn&#39;).trigger(&#39;click&#39;);</code></pre></li>
+<li>方式三<pre><code>$(&#39;#btn&#39;).triggerHandler(&#39;click&#39;);</code></pre></li>
+</ul>
+<hr>
+<h2 id="事件对象"><a href="#事件对象" class="headerlink" title="事件对象"></a>事件对象</h2><pre><code>$(&#39;#box&#39;).on(&#39;click&#39;,&#39;input&#39;,function(event) {
+  /**
+  * event.delegateTarget--&gt;指向的是box
+  * event.currentTarget--&gt;指向的是input
+  * event.target--&gt;指向的是input
+  */ 
+})</code></pre><hr>
+<h2 id="事件冒泡及取消事件冒泡"><a href="#事件冒泡及取消事件冒泡" class="headerlink" title="事件冒泡及取消事件冒泡"></a>事件冒泡及取消事件冒泡</h2><pre><code>// box1中有box2，box2中有box3
+$(&#39;#box1&#39;).click(function() {
+  console.log(&#39;box1&#39;);
+})
+$(&#39;#box2&#39;).click(function() {
+  console.log(&#39;box2&#39;);
+})
+$(&#39;#box3&#39;).click(function() {
+  console.log(&#39;box3&#39;);
+  return false; // 取消事件冒泡
+})
+// 点击box3 结果打印box3 box2 box1（事件冒泡）</code></pre>
+  </div>
+  <!--文末结束语-->
+  
+    <div style="text-align:center;color: #ccc;font-size:24px;"> --- 已经到底啦 <i class="iconfont icon-heartbeat" style="font-size:24px;"></i> The End --- </div>
+  
+  <!--页脚广告-->
+  
+  <div class="mdui-divider"></div>
+  
+  <nav>
+    
+      <a rel="prev" class="post-nav-item mdui-float-left" href="/2020/08/21/cross-domain/">
+        <i class="iconfont icon-angle-left"></i>
+        <span>跨域</span>
+      </a>
+    
+    
+      <a rel="next" class="post-nav-item mdui-float-right" href="/2020/08/15/Ajax/">
+        <span>Ajax</span>
+        <i class="iconfont icon-angle-right"></i>
+      </a>
+    
+  </nav>
+</article>
+
+
+
+
+  <div class="toc-button"  style="z-index: 100;">
+    <button class="mdui-fab mdui-ripple mdui-color-teal" mdui-menu="{target: '#toc'}"><i class="iconfont icon-list"></i></button>
+    <ul class="mdui-menu" id="toc">
+      <li class="mdui-menu-item">
+        <a href="/2020/08/17/jQuery/" id="toc-header" class="mdui-ripple">Table of Contents</a>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#关于jQuery"><span class="toc-number">1.</span> <span class="toc-text">关于jQuery</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#jQuery中的顶级对象"><span class="toc-number">2.</span> <span class="toc-text">jQuery中的顶级对象$</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#页面的加载事件"><span class="toc-number">3.</span> <span class="toc-text">页面的加载事件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#jQuery和DOM对象的相互转换"><span class="toc-number">4.</span> <span class="toc-text">jQuery和DOM对象的相互转换</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#jQuery选择器"><span class="toc-number">5.</span> <span class="toc-text">jQuery选择器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#jQuery样式操作"><span class="toc-number">6.</span> <span class="toc-text">jQuery样式操作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#链式编程"><span class="toc-number">7.</span> <span class="toc-text">链式编程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#jQuery中的动画"><span class="toc-number">8.</span> <span class="toc-text">jQuery中的动画</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#jQuery动态创建元素"><span class="toc-number">9.</span> <span class="toc-text">jQuery动态创建元素</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#自定义属性"><span class="toc-number">10.</span> <span class="toc-text">自定义属性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#事件绑定和解绑"><span class="toc-number">11.</span> <span class="toc-text">事件绑定和解绑</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#触发事件"><span class="toc-number">12.</span> <span class="toc-text">触发事件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#事件对象"><span class="toc-number">13.</span> <span class="toc-text">事件对象</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#事件冒泡及取消事件冒泡"><span class="toc-number">14.</span> <span class="toc-text">事件冒泡及取消事件冒泡</span></a></li></ol>
+      </li>
+    </ul>
+  </div>
+
+
+
+    <div id="comment" class="mdui-card mdui-p-a-2 mdui-m-b-5">
+      <div class="mdui-tab" mdui-tab>
+        
+          <a href="#comment-tab0" class="mdui-ripple">gitalk</a>
+        
+          <a href="#comment-tab1" class="mdui-ripple">livere</a>
+        
+      </div>
+      
+        <div id="comment-tab0" class="mdui-p-a-2">
+          <div id="gitalk-container"></div>
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/js-md5@0.7.3/src/md5.min.js"></script>
+<script>
+  var gitalk = new Gitalk({
+    clientID: '',
+    clientSecret: '',
+    repo: '',
+    owner: '',
+    admin: [''],
+    id:  md5(location.pathname) ,
+    distractionFreeMode: 'true',
+  });
+  gitalk.render('gitalk-container');
+</script>
+        </div>
+      
+        <div id="comment-tab1" class="mdui-p-a-2">
+          <div id="lv-container" data-id="city" data-uid="">
+  <script type="text/javascript">
+    (function (d, s) {
+      var j, e = d.getElementsByTagName(s)[0];
+      if (typeof LivereTower === 'function') { return; }
+      j = d.createElement(s);
+      j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+      j.async = true;
+      e.parentNode.insertBefore(j, e);
+    })(document, 'script');
+  </script>
+  <noscript>Please enable JavaScript to view the comments powered by LiveRe.</noscript>
+</div>
+        </div>
+      
+    </div>
+
+  </main>
+  <footer id="footer" class="mdui-text-center mdui-m-t-5 mdui-p-b-2 mdui-p-t-4 mdui-color-theme">
+  <div class="mdui-container">
+    <div class="mdui-row">
+      
+        <a href="http://www.beian.miit.gov.cn" rel="noopener" target="_blank"></a>
+      
+      <span>
+        &copy; 2019 - 2020 
+        
+          <span style="color:#d9333f" class="iconfont icon-heart"></span>
+        
+        Xbw
+      </span>
+    </div>
+    <div class="mdui-row">
+      
+        <span>Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a></span>
+      
+    </div>
+    <div class="mdui-row">
+      
+        <div class="mdui-col-xs-6 mdui-text-right">
+          <span id="busuanzi_container_site_uv" style="display: none;"> <span class="iconfont icon-user"></span>Total Visitors <span id="busuanzi_value_site_uv"></span></span>
+        </div>
+        <div class="mdui-col-xs-6 mdui-text-left">
+          <span id="busuanzi_container_site_pv" style="display: none;"> <span class="iconfont icon-eye"></span>Total Views <span id="busuanzi_value_site_pv"></span></span>
+        </div>
+      
+    </div>
+ </div>
+</footer>
+  
+  <button id="gotop" class="mdui-fab mdui-fab-fixed mdui-fab-hide mdui-ripple mdui-color-teal" style="z-index:100;"><i class="iconfont icon-arrowup"></i></button>
+  
+  
+
+    <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@8.4.8/dist/mermaid.min.js"></script>
+    <script>mermaid.initialize({
+        startOnLoad: true,
+        theme: "default"
+    });</script>
+
+
+
+
+<script src="/js/mdui.min.js"></script>
+<script src="/js/meadow.js"></script>
+
+</body>
+</html >
