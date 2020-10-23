@@ -216,7 +216,7 @@
     </span>
     <span>
       <span class="iconfont icon-calendar-check"></span>
-      Edited on:&nbsp;2020-08-24
+      Edited on:&nbsp;2020-09-07
     </span>
     <span>
       <span class="iconfont icon-folder"></span>
@@ -493,6 +493,241 @@
   color: blue;
 &lt;/style&gt;</code></pre></li>
 </ul>
+<hr>
+<h2 id="CSS选择器"><a href="#CSS选择器" class="headerlink" title="CSS选择器"></a>CSS选择器</h2><ul>
+<li><p>通配选择器（通配符，遍历）</p>
+<pre><code>&lt;style&gt;
+  * {
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+  }
+&lt;/style&gt;</code></pre></li>
+<li><p>标签选择器</p>
+<pre><code>&lt;style&gt;
+  div {
+    width: 200px;
+    height: 100px;
+  }
+&lt;/style&gt; </code></pre></li>
+<li><p>类选择器</p>
+<pre><code>&lt;style&gt;
+  .box {
+    background-color: red;
+  }
+&lt;/style&gt;</code></pre></li>
+<li><p>id选择器</p>
+<pre><code>#box {
+  background-color: blue;
+}</code></pre></li>
+<li><p>属性选择器</p>
+<pre><code>&lt;div title=&quot;one div&quot;&gt;我是div&lt;/div&gt;
+&lt;p title=&quot;one p&quot;&gt;我是p&lt;/p&gt;
+&lt;style&gt;
+  /*
+  [title=&quot;div元素&quot;] {
+    color: red;
+  }
+  */
+  // 只要包含one
+  [title*=&quot;one&quot;] {
+    color: red;
+  }
+  // 以one开头
+  [title^=&quot;one&quot;] {
+    color: red;
+  }
+  // 以one结尾
+  [title$=&quot;one&quot;] {
+    color: red;
+  }
+&lt;/style&gt;</code></pre></li>
+<li><p>后代选择器</p>
+<pre><code>&lt;div&gt;
+  &lt;span&gt;1&lt;/span&gt;
+  &lt;p&gt;
+    &lt;span&gt;2&lt;/span&gt;
+  &lt;/p&gt;
+&lt;/div&gt;
+&lt;style&gt;
+  div span {
+    color: red; 
+  }
+&lt;/style&gt;
+// 结果是 1 2变红
+&lt;style&gt;
+  div &gt; span {
+    color: red;
+  }
+&lt;/style&gt;
+// 结果是 1变红</code></pre></li>
+<li><p>兄弟选择器</p>
+<pre><code>// 后面紧挨着的元素
+&lt;span&gt;1&lt;/span&gt;
+&lt;div&gt;
+  &lt;span&gt;2&lt;/span&gt;
+&lt;div&gt;
+&lt;span&gt;3&lt;/span&gt;
+&lt;span&gt;4&lt;/span&gt;
+
+&lt;style&gt;
+  div+span {
+    color: red;
+  }
+&lt;/style&gt;
+// 只有 3变红
+
+&lt;style&gt;
+  div~span {
+    color: red;
+  }
+&lt;/style&gt;
+// 3 4变红</code></pre></li>
+<li><p>交集选择器和并集选择器</p>
+<pre><code>&lt;div class=&quot;box&quot; title=&quot;test&quot;&gt;&lt;/div&gt;
+&lt;div id=&quot;content&quot;&gt;&lt;/div&gt;
+&lt;style&gt;
+  // 交集选择器
+  div.box[title=&quot;test&quot;] {
+    width: 200px;
+    height: 200px;
+  }
+  .box, #content {
+    color: red;
+  }
+&lt;/style&gt;</code></pre></li>
+<li><p>伪类选择器</p>
+<ul>
+<li>动态伪类<pre><code>&lt;a href=&quot;#&quot;&gt;链接&lt;/a&gt;
+&lt;style&gt;
+  // 未访问的链接
+  a:link {
+    color: red;
+  }
+  // 已访问的链接
+  a:visited {
+    color: blue;
+  }
+  // 获取焦点
+  a:focus {
+    background-color: red;
+  }
+  // 鼠标挪到链接 必须放在link和visited的后面才会生效
+  a:hover {
+    color: green;
+  }
+  // 鼠标在链接上按住未松手 必须放在hover后面才能生效
+  a:active {
+    color: yellow;
+  } 
+&lt;/style&gt;</code></pre></li>
+<li>目标伪类<pre><code>&lt;a href=&quot;#title&quot;&gt;标题&lt;/a&gt;
+&lt;h2 id=&quot;title&quot;&gt;标题&lt;/h2&gt;
+&lt;style&gt;
+  :target {
+    color: red;
+  }
+&lt;/style&gt;</code></pre></li>
+<li>语言伪类</li>
+<li>元素状态伪类<pre><code>&lt;button disabled&gt;按钮&lt;/button&gt;
+&lt;button&gt;按钮&lt;/button&gt;
+&lt;style&gt;
+  :disabled {
+    color: red;
+  }
+&lt;/style&gt;</code></pre></li>
+<li>结构伪类<pre><code>&lt;div class=&quot;box&quot;&gt;
+  &lt;p&gt;1&lt;/p&gt;
+  &lt;p&gt;2&lt;/p&gt;
+  &lt;p&gt;3&lt;/p&gt;
+  &lt;p&gt;4&lt;/p&gt;
+&lt;/div&gt;
+&lt;style&gt;
+  // 2变成红色
+  .box:nth-child(2) {
+    color: red;
+  }
+  // 所有偶数变红 even
+  .box:nth-child(2n) {
+    color: red;
+  }
+  // 所有奇数变红 odd
+  .box:nth-child(2n+1) {
+    color: red;
+  }
+  // 倒数第一个元素变红
+  .box:nth-last-child(1) {
+    color: red;
+  }
+  .box:nth-of-type(1) {
+    color: blue;
+  }
+&lt;/style&gt;</code></pre></li>
+<li>否定伪类<pre><code>&lt;div&gt;div元素&lt;/div&gt;
+&lt;p&gt;p元素&lt;/p&gt;
+&lt;p&gt;p元素&lt;/p&gt;
+&lt;span&gt;span元素&lt;/span&gt;
+&lt;style&gt;
+  body :not(div) {
+    color: red;
+  }
+&lt;/style&gt;</code></pre></li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="CSS伪元素"><a href="#CSS伪元素" class="headerlink" title="CSS伪元素"></a>CSS伪元素</h2><ul>
+<li>first-line</li>
+<li>first-letter</li>
+<li>before</li>
+<li>after</li>
+</ul>
+<hr>
+<h2 id="文字属性"><a href="#文字属性" class="headerlink" title="文字属性"></a>文字属性</h2><ul>
+<li><code>text-decoration</code><ul>
+<li>none 无下划线</li>
+<li>underline 下划线</li>
+<li>overline 上划线</li>
+<li>line-through 删除线</li>
+</ul>
+</li>
+<li><code>letter-spacing</code> 字母间间距</li>
+<li><code>word-spacing</code> 单词间间距</li>
+<li><code>text-transform</code> 大小写转换<ul>
+<li>capitalize 首字母大写</li>
+<li>uppercase 大写</li>
+<li>lowercase 小写</li>
+<li>none 无</li>
+</ul>
+</li>
+<li><code>text-indent</code> 设置第一行缩进</li>
+<li><code>text-align</code> 设置元素内容在元素中水平对齐方式<ul>
+<li>left 左对齐</li>
+<li>right 右对齐</li>
+<li>center 居中显示</li>
+<li>justify 左右两端对齐（对最后一行无效果）</li>
+</ul>
+</li>
+<li><code>font-size</code> 设置字体大小</li>
+<li><code>font-family</code> 设置字体名称<pre><code>p {
+  // 可设置多个字体 
+  font-family: &#39;微软雅黑&#39;,arial;
+}</code></pre></li>
+<li><code>font-weight</code> 设置文字的粗细（可以是具体值）<ul>
+<li>bold 加粗 相当于700</li>
+<li>normal 常规 相当于400</li>
+</ul>
+</li>
+<li><code>font-style</code> 设置文字的样式<ul>
+<li>normal 常规 </li>
+<li>italic 斜体（font-family这种字体支持斜体）</li>
+<li>oblique 斜体（让文字倾斜）</li>
+</ul>
+</li>
+<li><code>font-varient</code>  </li>
+<li><code>line-height</code> 设置行高（两行文字基线baseline之间的距离）</li>
+</ul>
+<hr>
 
   </div>
   <!--文末结束语-->
@@ -522,7 +757,7 @@
     <ul class="mdui-menu" id="toc">
       <li class="mdui-menu-item">
         <a href="/2020/08/23/HTML-CSS-Review/" id="toc-header" class="mdui-ripple">Table of Contents</a>
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#HTML"><span class="toc-number">1.</span> <span class="toc-text">HTML</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#完整的HTML结构"><span class="toc-number">1.1.</span> <span class="toc-text">完整的HTML结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HTML基本元素"><span class="toc-number">1.2.</span> <span class="toc-text">HTML基本元素</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#CSS（层叠样式表）"><span class="toc-number">2.</span> <span class="toc-text">CSS（层叠样式表）</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#CSS引入的三种方式"><span class="toc-number">2.1.</span> <span class="toc-text">CSS引入的三种方式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CSS编码和import引入"><span class="toc-number">2.2.</span> <span class="toc-text">CSS编码和import引入</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#HTML"><span class="toc-number">1.</span> <span class="toc-text">HTML</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#完整的HTML结构"><span class="toc-number">1.1.</span> <span class="toc-text">完整的HTML结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HTML基本元素"><span class="toc-number">1.2.</span> <span class="toc-text">HTML基本元素</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#CSS（层叠样式表）"><span class="toc-number">2.</span> <span class="toc-text">CSS（层叠样式表）</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#CSS引入的三种方式"><span class="toc-number">2.1.</span> <span class="toc-text">CSS引入的三种方式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CSS编码和import引入"><span class="toc-number">2.2.</span> <span class="toc-text">CSS编码和import引入</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CSS选择器"><span class="toc-number">2.3.</span> <span class="toc-text">CSS选择器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CSS伪元素"><span class="toc-number">2.4.</span> <span class="toc-text">CSS伪元素</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#文字属性"><span class="toc-number">2.5.</span> <span class="toc-text">文字属性</span></a></li></ol></li></ol>
       </li>
     </ul>
   </div>
