@@ -2,9 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2020/11/21/Vuex/</loc>
+    
+    <lastmod>2020-11-21T11:16:30.613Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2020/06/23/Vue-Router/</loc>
+    
+    <lastmod>2020-11-20T14:35:04.191Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2020/06/16/Webpack/</loc>
+    
+    <lastmod>2020-11-10T10:27:26.301Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2020/06/05/vue/</loc>
     
-    <lastmod>2020-10-22T10:02:24.204Z</lastmod>
+    <lastmod>2020-11-02T13:56:50.877Z</lastmod>
     
   </url>
   
@@ -79,13 +100,6 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/2020/06/23/Vue-Router/</loc>
-    
-    <lastmod>2020-06-26T12:41:34.969Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://yoursite.com/2020/06/18/Vue-CLI/</loc>
     
     <lastmod>2020-06-22T10:53:27.420Z</lastmod>
@@ -96,13 +110,6 @@
     <loc>http://yoursite.com/2020/06/04/algorithm-notes/</loc>
     
     <lastmod>2020-06-19T14:06:29.957Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2020/06/16/Webpack/</loc>
-    
-    <lastmod>2020-06-18T02:43:20.669Z</lastmod>
     
   </url>
   

@@ -216,7 +216,7 @@
     </span>
     <span>
       <span class="iconfont icon-calendar-check"></span>
-      Edited on:&nbsp;2020-10-22
+      Edited on:&nbsp;2020-11-02
     </span>
     <span>
       <span class="iconfont icon-folder"></span>
@@ -415,8 +415,8 @@ const app = new Vue({
     firstStr: &#39;hello&#39;,
     lastStr: &#39;world&#39;
   },
-  computed: {
-    fullStr: function() {
+  computed: {  // 一般情况下是只读属性，所以不需要set方法
+    fullStr: {
       set: function(value) { //大多数情况不写
       const str = value.split(&#39; &#39;);
       this.firstStr = str[0];
